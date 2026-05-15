@@ -16,7 +16,7 @@ const HomeHero = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Text */}
-      <div className="absolute bottom-20 left-10 z-10">
+      <div className="absolute bottom-36 left-10 z-10">
         <h1 className="text-white text-6xl font-extralight leading-tight">
           A home is more than
           <br />
