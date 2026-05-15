@@ -1,11 +1,27 @@
-import React from 'react'
+import ourstoryhero from "../../assets/ourstory/ourstoryhero.png";
 
 const StoryHero = () => {
   return (
-    <div>
+    <section className="relative w-full h-screen overflow-hidden">
       
-    </div>
-  )
-}
+      {/* Background Image */}
+      <img
+        src={ourstoryhero}
+        alt="Our Story Hero"
+        className="w-full h-full object-cover"
+      />
 
-export default StoryHero
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/10"></div>
+
+      {/* Center Text */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-black text-5xl md:text-7xl lg:text-8xl font-semibold tracking-wide drop-shadow-lg">
+          Our Story
+        </h1>
+      </div>
+    </section>
+  );
+};
+
+export default StoryHero;

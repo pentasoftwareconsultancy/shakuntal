@@ -69,6 +69,7 @@ const careers = [
 const CareerPage = () => {
   return (
     <section className="bg-[#f5f5f5] min-h-screen pb-16">
+      
       {/* Hero Section */}
       <div
         className="relative h-[320px] bg-cover bg-center flex items-end"
@@ -88,27 +89,27 @@ const CareerPage = () => {
           </h1>
 
           <p className="text-white/80 text-sm md:text-base mt-4 max-w-2xl">
-            Explore exciting opportunities and grow your career in an environment
-            that values dedication, teamwork, and continuous learning.
+            Explore exciting opportunities and grow your career in an
+            environment that values dedication, teamwork, and continuous
+            learning.
           </p>
         </div>
 
         {/* Floating Badge */}
-        <div className="absolute right-6 bottom-[-24px] w-14 h-14 rounded-full bg-[#0f9aad] shadow-xl flex items-center justify-center text-white text-xl font-semibold z-20">
-          S
-        </div>
+        
       </div>
 
       {/* Career List */}
-      <div className="max-w-6xl mx-auto px-4 md:px-8 mt-16 space-y-5">
+      <div className="w-full px-4 md:px-8 lg:px-12 mt-16 space-y-5">
         {careers.map((career) => (
           <div
             key={career.id}
-            className="bg-white rounded-2xl shadow-md p-6 md:p-7 flex flex-col md:flex-row md:items-center md:justify-between gap-6 hover:shadow-lg transition duration-300"
+            className="w-full bg-white rounded-2xl shadow-md px-8 py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-6 hover:shadow-lg transition duration-300"
           >
+            
             {/* Left Content */}
-            <div className="max-w-4xl">
-              <h3 className="text-2xl font-medium text-[#2b2b2b]">
+            <div className="max-w-5xl">
+              <h3 className="text-2xl md:text-3xl font-medium text-[#2b2b2b]">
                 {career.title}
               </h3>
 
@@ -116,13 +117,13 @@ const CareerPage = () => {
                 {career.description}
               </p>
 
-              <p className="text-[#8b8b8b] text-sm mt-3">
+              <p className="text-[#8b8b8b] text-sm mt-4">
                 {career.experience}
               </p>
             </div>
 
             {/* Button */}
-            <button className="min-w-[150px] h-[48px] border border-[#b68b07] rounded-xl text-[#b68b07] font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
+            <button className="min-w-[160px] h-[50px] border border-[#b68b07] rounded-xl text-[#b68b07] text-base font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
               Join Us
             </button>
           </div>
