@@ -1,4 +1,4 @@
-name: Auto Create PR to Default Branch
+name: 01 Auto Create PR to Default Branch
 
 on:
   push:
