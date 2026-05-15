@@ -9,13 +9,13 @@ const Navbar = () => {
   // WhatsApp Redirect
   const handleWhatsAppChat = () => {
     window.open(
-      'https://wa.me/9309910816',
+      'https://wa.me/919309910816',
       '_blank'
     )
   }
 
   return (
-    <div className="w-full bg-gradient-to-r from-[#02152d] to-[#002b5b] px-16 py-3 flex items-center justify-between">
+    <div className="w-full absolute top-0 left-0 z-50 px-16 py-5 flex items-center justify-between bg-transparent">
 
       {/* Logo */}
       <div
