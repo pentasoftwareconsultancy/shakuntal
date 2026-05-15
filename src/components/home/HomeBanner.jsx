@@ -1,9 +1,9 @@
-import React from 'react'
+import homebanner from '../../assets/home/homebaner.png'
 
 const HomeBanner = () => {
   return (
     <div>
-      HomeBanner
+      <img src={homebanner} alt="Home Banner" />
     </div>
   )
 }
