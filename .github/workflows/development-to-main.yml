@@ -1,0 +1,82 @@
+name: 02 - Development to Main
+
+on:
+  workflow_dispatch:
+    inputs:
+      approval:
+        description: 'Type DEPLOY to continue'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate-and-create-main-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Approval validation
+      - name: Validate Approval
+        run: |
+          if [ "${{ github.event.inputs.approval }}" != "DEPLOY" ]; then
+            echo "❌ Invalid approval input"
+            exit 1
+          fi
+
+          echo "✅ Team Lead approved deployment"
+
+      # Step 2: Checkout development branch
+      - name: Checkout Development Branch
+        uses: actions/checkout@v4
+        with:
+          ref: development
+          fetch-depth: 0
+
+      # Step 3: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Step 4: Install dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # Step 5: Lint Check
+      - name: Run Lint
+        run: npm run lint --if-present
+
+      # Step 6: Build Check
+      - name: Run Build
+        run: npm run build --if-present
+
+      # Step 7: Test Check
+      - name: Run Tests
+        run: npm test --if-present
+
+      # Step 8: Create PR to Main
+      - name: Create PR to Main
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: auto-development-to-main
+          base: main
+          title: "Release: development → main"
+          body: |
+            Auto-generated PR after successful validation.
+
+            Checks Passed:
+            - npm install
+            - lint
+            - build
+            - tests
+
+          delete-branch: true
+
+      # Step 9: Summary
+      - name: Deployment Summary
+        run: |
+          echo "✅ Validation completed"
+          echo "✅ PR created from development → main"
