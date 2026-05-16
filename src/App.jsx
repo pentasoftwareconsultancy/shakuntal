@@ -10,6 +10,7 @@ const EnquiryPage = lazy(() => import('./pages/EnquirePage'))
 const CareersPage = lazy(() => import('./pages/CareerPage'))
 const ProjectDetailsPage = lazy(() => import('./pages/ProjectDetailPage'))
 const ContactUsPage = lazy(() => import('./pages/ContactUsPage'))
+const ScrollToTop = lazy(() => import('./components/ScrollToTop'))
 const Footer = lazy(() => import('./components/common/Footer'))
 const Navbar = lazy(() => import('./components/common/Navbar'))
 
@@ -28,6 +29,7 @@ function App() {
           <Route path={ROUTES.PROJECTDETAIL} element={<ProjectDetailsPage />} />
           <Route path={ROUTES.CONTACT} element={<ContactUsPage />} />
         </Routes>
+        <ScrollToTop />
         <Footer />
       </Suspense>
     </BrowserRouter>
