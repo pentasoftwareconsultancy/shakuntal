@@ -1,5 +1,5 @@
 
-import projectdetailhero from '../../assets/projectDetail/projectdetailshero.png';
+import projectdetailhero from '../../assets/projectDetailFour/hero.png';
 
 const ProjectHero = () => {
   return (

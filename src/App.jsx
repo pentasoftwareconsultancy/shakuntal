@@ -31,6 +31,7 @@ function AppContent() {
   const hideFooterRoutes = [
     ROUTES.OURPROJECT,
     ROUTES.ENQUIRE,
+    ROUTES.PROJECTDETAILFIVE,
   ]
 
   const shouldHideFooter = hideFooterRoutes.includes(

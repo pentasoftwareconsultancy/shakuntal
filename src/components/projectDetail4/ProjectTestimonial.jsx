@@ -1,13 +1,9 @@
-import React from "react";
 
 const testimonials = [
   {
     id: 1,
     title: "Video Testimonial",
-  },
-  {
-    id: 2,
-    title: "Video Testimonial",
+    link: "https://www.youtube.com/watch?v=iQgjAI4rWVU&t=2s"
   },
 ];
 
@@ -32,8 +28,9 @@ const ProjectTestimonial = () => {
       {/* Testimonial Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
         {testimonials.map((item) => (
-          <div
+          <a
             key={item.id}
+            href={item.link}
             className="relative h-[320px] bg-[#e9e9e9] rounded-[18px] overflow-hidden flex items-center justify-center group shadow-md"
           >
             {/* Quote Icon */}
@@ -48,7 +45,7 @@ const ProjectTestimonial = () => {
 
             {/* Hover Effect */}
             <div className="absolute inset-0 border border-transparent group-hover:border-[#b68b07] rounded-[18px] transition duration-300"></div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

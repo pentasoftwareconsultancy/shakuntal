@@ -1,4 +1,3 @@
-import React from "react";
 
 const locationData = [
   {
@@ -76,11 +75,16 @@ const ProjectMapLocation = () => {
     <section className="bg-[#f5f5f5] py-16 px-6 md:px-16 lg:px-24">
       {/* Map */}
       <div className="overflow-hidden rounded-[24px] shadow-md">
-        <img
-          src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1600&auto=format&fit=crop"
-          alt="Map"
-          className="w-full h-[260px] object-cover grayscale"
-        />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3420.353154958774!2d73.82622427465587!3d18.681337364244733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b7fe03b369d3%3A0x691a5b80b3c1e2fc!2sShakuntal%20Commercia!5e1!3m2!1sen!2sin!4v1778935195833!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full"
+        ></iframe>
       </div>
 
       {/* Location Grid */}
