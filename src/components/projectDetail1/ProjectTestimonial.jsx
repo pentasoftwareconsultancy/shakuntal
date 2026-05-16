@@ -4,10 +4,12 @@ const testimonials = [
   {
     id: 1,
     title: "Video Testimonial",
+    link: "https://www.youtube.com/watch?v=GCKL2hsoXAI",
   },
   {
     id: 2,
     title: "Video Testimonial",
+    link: "https://www.youtube.com/watch?v=GCKL2hsoXAI",
   },
 ];
 
@@ -32,9 +34,12 @@ const ProjectTestimonial = () => {
       {/* Testimonial Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
         {testimonials.map((item) => (
-          <div
+          <a
             key={item.id}
-            className="relative h-[320px] bg-[#e9e9e9] rounded-[18px] overflow-hidden flex items-center justify-center group shadow-md"
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative h-[320px] bg-[#e9e9e9] rounded-[18px] overflow-hidden flex items-center justify-center group shadow-md cursor-pointer"
           >
             {/* Quote Icon */}
             <div className="absolute top-6 left-1/2 -translate-x-1/2 text-[70px] text-[#ece7e7] font-serif">
@@ -48,7 +53,7 @@ const ProjectTestimonial = () => {
 
             {/* Hover Effect */}
             <div className="absolute inset-0 border border-transparent group-hover:border-[#b68b07] rounded-[18px] transition duration-300"></div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

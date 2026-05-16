@@ -1,5 +1,7 @@
-import React from "react";
 import { Building2, MapPin } from "lucide-react";
+import aboutIcon1 from "../../assets/projectDetailTwo/abouticon1.png";
+import aboutIcon2 from "../../assets/projectDetailTwo/abouticon2.png";
+import aboutIcon3 from "../../assets/projectDetailTwo/abouticon3.png";
 
 const ProjectAbout = () => {
   return (
@@ -8,31 +10,17 @@ const ProjectAbout = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10 border-b border-gray-300 pb-10">
         {/* Logo */}
         <div className="flex flex-col items-center lg:items-start">
-          <h2 className="text-[#2d2a73] text-[64px] font-bold leading-none">
-            Dwarka
-          </h2>
-
-          <p className="text-[#2d2a73] text-sm tracking-[2px] mt-2">
-            2, 3 & 4 BHK LIMITED EDITION HOMES
-          </p>
+          <img src={aboutIcon1} alt="Project Logo" className="w-24 h-24 mb-4" />
         </div>
 
         {/* Apartment Info */}
         <div className="flex items-center gap-5">
-          <Building2 size={52} strokeWidth={1.8} />
-
-          <p className="text-[28px] text-[#2b2b2b] font-medium">
-            2, 3 & 4 BHK Riverside Apartments
-          </p>
+          <img src={aboutIcon2} alt="Apartment Icon" className="w-12 h-12" />
         </div>
 
         {/* Location */}
         <div className="flex items-center gap-5">
-          <MapPin size={52} strokeWidth={1.8} />
-
-          <p className="text-[28px] text-[#2b2b2b] font-medium">
-            Jadhavwadi, Chikhali, PCMC, Pune
-          </p>
+          <img src={aboutIcon3} alt="Location Icon" className="w-12 h-12" />
         </div>
       </div>
 

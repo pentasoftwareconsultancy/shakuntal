@@ -1,20 +1,19 @@
-import React from "react";
+import gallery1 from "../../assets/projectDetailThree/gallery1.png";
+import gallery2 from "../../assets/projectDetailThree/gallery2.png";
+import gallery3 from "../../assets/projectDetailThree/gallery3.png";
 
 const galleryImages = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop",
+    image: gallery1,
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+    image: gallery2,
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop",
+    image: gallery3,
   },
 ];
 

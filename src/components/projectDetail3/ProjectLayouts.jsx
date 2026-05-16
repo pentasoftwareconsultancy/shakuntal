@@ -1,23 +1,21 @@
 import React, { useState } from "react";
+import layout from "../../assets/projectDetailThree/layout.png";
 
 const layouts = [
   {
     id: 1,
     type: "2 BHK",
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
+    image: layout,
   },
   {
     id: 2,
     type: "3 BHK",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+    image: layout,
   },
   {
     id: 3,
     type: "4 BHK",
-    image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop",
+    image: layout,
   },
 ];
 

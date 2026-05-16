@@ -4,7 +4,6 @@ import ProjectBannerOne from '../components/projectDetail2/ProjectBannerOne'
 import ProjectAmenities from '../components/projectDetail2/ProjectAmenities'
 import ProjectBannerTwo from '../components/projectDetail2/ProjectBannerTwo'
 import ProjectLayouts from '../components/projectDetail2/ProjectLayouts'
-import ProjectGallery from '../components/projectDetail2/ProjectGallery'
 import ProjectTestimonial from '../components/projectDetail2/ProjectTestimonial'
 import ProjectMapLocation from '../components/projectDetail2/ProjectMapLocation'
 
@@ -17,7 +16,6 @@ const ProjectDetailPage2 = () => {
       <ProjectAmenities />
       <ProjectBannerTwo />
       <ProjectLayouts />
-      <ProjectGallery />
       <ProjectTestimonial />
       <ProjectMapLocation />
     </div>

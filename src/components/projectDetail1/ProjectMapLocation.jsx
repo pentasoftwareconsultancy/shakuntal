@@ -1,72 +1,70 @@
-import React from "react";
+
 
 const locationData = [
   {
     title: "Shopping Malls / Multiplexes",
     places: [
-      ["SNBP International School", "500 Mtr"],
-      ["Priyadarshani School", "1.5 Kms"],
-      ["City Pride School Moshi", "1.4 Kms"],
-      ["Sri Sri Ravishankar Vidya Mandir", "4.8 Kms"],
-      ["Vishwakalyan English School", "4.0 Kms"],
-      ["AHP School", "4.6 Kms"],
-      ["Sadhu Vaswani International School", "7.4 Kms"],
+      ["Reliance Mall", "10 mins"],
+      ["D-Mart Ravet", "12 mins"],
+      ["Phoenix Market City", "28 mins"],
+      ["Xion Mall, Hinjewadi", "18 mins"],
+      ["E-square Multiplex", "19 mins"],
     ],
   },
   {
     title: "Restaurants / Hotels",
     places: [
-      ["Modern College", "2.8 Kms"],
-      ["IIBM College of Hotel Management", "4.4 Kms"],
-      ["D Y Patil College - Pimpri", "9.2 Kms"],
-      ["MIT ACSC", "8.7 Kms"],
-      ["(PCCOE)", "13 Kms"],
+      ["Subway", "04 mins"],
+      ["McDonald’s", "04 mins"],
+      ["Krishna Pure Veg", "07 mins"],
+      ["Sentosa Resort", "09 mins"],
+      ["Sayaji Hotel", "16 mins"],
     ],
   },
   {
-    title: "KEY PLACES",
+    title: "Important Destinations",
     places: [
-      ["Chikhali Bus Stop", "3.0 Kms"],
-      ["Spine Road", "5.0 Kms"],
-      ["Tata Motors", "5.4 Kms"],
-      ["Proposed CC", "5.4 Kms"],
-      ["KSB Chowk", "7.0 Kms"],
-      ["Pune Nashik Highway", "7.8 Kms"],
-      ["Telco Road", "7.7 Kms"],
-      ["Thermax Chowk", "7.6 Kms"],
-      ["Mumbai Pune Highway", "10.0 Kms"],
-      ["Nigdi", "11.0 Kms"],
+      ["Pune–Mumbai Expressway", "08 mins"],
+      ["Ravet (Mukai Chowk)", "10 mins"],
+      ["Wakad", "12 mins"],
+      ["MCA Cricket Stadium", "15 mins"],
+      ["Baner", "18 mins"],
+      ["Aundh", "20 mins"],
+      ["Pimple Saudagar", "18 mins"],
+      ["Chinchwad", "20 mins"],
+    ],
+  },
+  {
+    title: "Adventure / Leisure Places",
+    places: [
+      ["JSPM College", "12 mins"],
+      ["City Pride School", "12 mins"],
+      ["Adhira Int. School", "14 mins"],
+      ["SB Patil School / College", "15 mins"],
+      ["Symbiosis Institute JSPM", "18 mins"],
+      ["PCP College", "17 mins"],
+      ["Indira College", "18 mins"],
+      ["D Y Patil School", "20 mins"],
+      ["Akshara Int. School", "22 mins"],
+    ],
+  },
+  {
+    title: "Work Hubs / IT Parks",
+    places: [
+      ["Hinjewadi IT Park", "18 mins"],
+      ["Urse MIDC", "25 mins"],
+      ["Chinchwad MIDC", "28 mins"],
+      ["Talegaon MIDC", "34 mins"],
     ],
   },
   {
     title: "Hospitals",
     places: [
-      ["Lotus Multispeciality Hospital", "3.4 Kms"],
-      ["Sainath Hospital", "7.0 Kms"],
-      ["SDH Hospital", "7.0 Kms"],
-      ["YCM Hospital", "9.4 Kms"],
-      ["Lokmanya Hospital", "9.5 Kms"],
-      ["Aditya Birla Memorial Hospital", "12 Kms"],
-    ],
-  },
-  {
-    title: "MALLS / RETAIL MARKET",
-    places: [
-      ["D-Mart, Moshi", "2.4 Kms"],
-      ["Prasanna Gold Fields Complex", "4.2 Kms"],
-      ["Spine City Mall", "7 Kms"],
-      ["City One Mall", "9.3 Kms"],
-      ["El-Pro Chinchwad", "10 Kms"],
-    ],
-  },
-  {
-    title: "Entertainment",
-    places: [
-      ["Carnival Cinema, Chinchwad", "10.0 Kms"],
-      ["PVR Cinema", "9.3 Kms"],
-      ["Vishal E-Square, Pimpri", "9.7 Kms"],
-      ["Akurdi", "9.9 Kms"],
-      ["Nashik Phata", "13.0 Kms"],
+      ["Ojas Hospital", "12 mins"],
+      ["Lokmanya Hospital", "14 mins"],
+      ["Life Point Hospital", "18 mins"],
+      ["Aditya Birla Hospital", "22 mins"],
+      ["Niramaya Hospital", "20 mins"],
     ],
   },
 ];
@@ -76,11 +74,16 @@ const ProjectMapLocation = () => {
     <section className="bg-[#f5f5f5] py-16 px-6 md:px-16 lg:px-24">
       {/* Map */}
       <div className="overflow-hidden rounded-[24px] shadow-md">
-        <img
-          src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1600&auto=format&fit=crop"
-          alt="Map"
-          className="w-full h-[260px] object-cover grayscale"
-        />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3420.2644221065216!2d73.822747374656!3d18.685732964109384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b787dcc4c7f1%3A0x2711725aa57ad2fd!2sDwarka%20BlueWater!5e1!3m2!1sen!2sin!4v1778931315888!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full"
+        ></iframe>
       </div>
 
       {/* Location Grid */}

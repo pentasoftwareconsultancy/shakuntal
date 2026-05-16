@@ -1,20 +1,19 @@
-
+import gallery1 from "../../assets/projectDetailOne/gallery1.png";
+import gallery2 from "../../assets/projectDetailOne/gallery2.png";
+import gallery3 from "../../assets/projectDetailOne/gallery.png";
 
 const galleryImages = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop",
+    image: gallery1,
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+    image: gallery2,
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop",
+    image: gallery3,
   },
 ];
 
@@ -28,7 +27,7 @@ const ProjectGallery = () => {
 
       {/* Heading */}
       <h2 className="text-5xl md:text-6xl font-medium text-[#1f1f1f] mt-10 leading-tight">
-        Luxury Living Where Comfort Meets
+        Take a closer look at the spaces, design, and lifestyle that define the project.
       </h2>
 
       {/* Gallery Grid */}
