@@ -1,10 +1,13 @@
 import { Phone, Mail, MapPin, Send } from "lucide-react";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
+import { ROUTES } from "../../core/constants/routes.constant";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-[#120b00] text-white px-6 md:px-16 lg:px-24 pt-16 pb-8">
-      
+
       {/* Main Footer */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-[#2a2116] pb-12">
 
@@ -25,21 +28,53 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex items-center gap-4 mt-6">
-            <div className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer">
+
+            {/* Phone */}
+            <a
+              href="tel:8888881672"
+              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
+            >
               <Phone size={16} />
-            </div>
+            </a>
 
-            <div className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer">
+            {/* Mail */}
+            <a
+              href="mailto:alentiashakuntal@gmail.com"
+              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
+            >
               <Mail size={16} />
-            </div>
+            </a>
 
-            <div className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer">
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/profile.php?id=61574815765879"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
+            >
+              <FaFacebookF size={15} />
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/shakuntalgroup/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
+            >
               <FaInstagram size={15} />
-            </div>
+            </a>
 
-            <div className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer">
+            {/* Linkedin */}
+            <a
+              href="https://www.linkedin.com/company/shakuntal-group"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
+            >
               <FaLinkedinIn size={15} />
-            </div>
+            </a>
+
           </div>
         </div>
 
@@ -48,11 +83,11 @@ const Footer = () => {
           <h3 className="text-2xl font-semibold mb-6">Explore</h3>
 
           <ul className="space-y-4 text-[#9b9488] text-sm">
-            <li className="hover:text-white transition cursor-pointer">
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.HOME)}>
               Home
             </li>
 
-            <li className="hover:text-white transition cursor-pointer">
+            <li className="hover:text-white transition cursor-pointer" >
               About
             </li>
 
@@ -149,7 +184,7 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 text-[#9b9488] text-sm">
-        
+
         <p>
           © All Copyright 2025 by Mindfull Creative Studio
         </p>

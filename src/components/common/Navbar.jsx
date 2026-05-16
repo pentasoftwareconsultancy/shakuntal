@@ -1,4 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { ROUTES } from '../../core/constants/routes.constant'
 import logo from '../../assets/logo.png'
 
@@ -6,16 +7,33 @@ const Navbar = () => {
   const navigate = useNavigate()
   const location = useLocation()
 
+  // Navbar Background State
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   // WhatsApp Redirect
   const handleWhatsAppChat = () => {
     window.open(
-      'https://wa.me/919309910816',
+      'https://wa.me/7798088866',
       '_blank'
     )
   }
 
   return (
-    <div className="w-full absolute top-0 left-0 z-50 px-16 py-5 flex items-center justify-between bg-transparent">
+    <div
+      className="w-full fixed top-0 left-0 z-50 px-16 py-5 flex items-center justify-between bg-[#00000066] backdrop-blur-[25px]"
+    >
 
       {/* Logo */}
       <div

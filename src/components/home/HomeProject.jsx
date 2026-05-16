@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react'
 
 import project1 from '../../assets/home/project1.avif'
-import project2 from '../../assets/home/project2.avif'
-import project3 from '../../assets/home/project3.avif'
-import project4 from '../../assets/home/project4.avif'
-import project5 from '../../assets/home/project5.avif'
+import project2 from '../../assets/home/project2.jpg'
+import project3 from '../../assets/home/project3.jpg'
+import project4 from '../../assets/home/project4.jpg'
+import project5 from '../../assets/home/project5.png'
 
 const projectsData = [
   {

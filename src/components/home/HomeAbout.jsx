@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../core/constants/routes.constant";
 
 const statsData = [
   {
@@ -57,8 +59,9 @@ const Counter = ({ target, suffix }) => {
 };
 
 const HomeAbout = () => {
+  const navigate = useNavigate();
   return (
-    <section className="w-full bg-[#f5f5f5] px-8 md:px-20 py-24 overflow-hidden">
+    <section className="w-full px-8 md:px-20 py-24 overflow-hidden">
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         
@@ -111,6 +114,7 @@ const HomeAbout = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="mt-12 border border-[#b28a19] text-[#b28a19] px-10 py-4 rounded-xl hover:bg-[#b28a19] hover:text-white transition-all duration-300"
+            onClick={() => navigate(ROUTES.CONTACT)}
           >
             Schedule A Visit
           </motion.button>
