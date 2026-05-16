@@ -1,5 +1,8 @@
-import React from "react";
 import { Building2, MapPin } from "lucide-react";
+import aboutIcon1 from "../../assets/projectDetailOne/aboutIcon1.png";
+import aboutIcon2 from "../../assets/projectDetailOne/aboutIcon2.png";
+import aboutIcon3 from "../../assets/projectDetailOne/aboutIcon3.png";
+import about from "../../assets/projectDetailOne/about.png";
 
 const ProjectAbout = () => {
   return (
@@ -8,31 +11,17 @@ const ProjectAbout = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10 border-b border-gray-300 pb-10">
         {/* Logo */}
         <div className="flex flex-col items-center lg:items-start">
-          <h2 className="text-[#2d2a73] text-[64px] font-bold leading-none">
-            Dwarka
-          </h2>
-
-          <p className="text-[#2d2a73] text-sm tracking-[2px] mt-2">
-            2, 3 & 4 BHK LIMITED EDITION HOMES
-          </p>
+          <img src={aboutIcon1} alt="Project Icon" className="w-16 mb-4" />
         </div>
 
         {/* Apartment Info */}
         <div className="flex items-center gap-5">
-          <Building2 size={52} strokeWidth={1.8} />
-
-          <p className="text-[28px] text-[#2b2b2b] font-medium">
-            2, 3 & 4 BHK Riverside Apartments
-          </p>
+          <img src={aboutIcon2} alt="Apartment Icon" className="w-12" />
         </div>
 
         {/* Location */}
         <div className="flex items-center gap-5">
-          <MapPin size={52} strokeWidth={1.8} />
-
-          <p className="text-[28px] text-[#2b2b2b] font-medium">
-            Jadhavwadi, Chikhali, PCMC, Pune
-          </p>
+          <img src={aboutIcon3} alt="Location Icon" className="w-12" />
         </div>
       </div>
 
@@ -41,12 +30,11 @@ const ProjectAbout = () => {
         {/* Left Content */}
         <div>
           <h2 className="text-[56px] leading-[1.2] font-medium text-[#1f1f1f]">
-            Limited Edition Homes <br />
-            Designed for Everyday Comfort
+            Riverside Living Designed for a Better Everyday
           </h2>
 
           <p className="text-[#6f6f6f] text-[28px] mt-6">
-            Jadhavwadi, Chikhali, Pune
+            Jadhavwadi, Chikhali, PCMC, Pune
           </p>
 
           {/* Highlights */}
@@ -56,34 +44,34 @@ const ProjectAbout = () => {
             </h3>
 
             <ul className="space-y-4 text-[#707070] text-[24px] leading-relaxed">
-              <li>• 2, 3 & 4 BHK Spacious Residential Homes</li>
+              <li>• 2, 3 & 4 BHK Riverside Apartments</li>
 
               <li>
-                • Efficient Layouts with Maximum Space Utilization
+                • Scenic Surroundings with Open Living Spaces
               </li>
 
               <li>
-                • Prime Location with Strong Connectivity
+                • Spacious Layouts with Natural Ventilation
               </li>
 
               <li>
-                • Lifestyle Amenities for Daily Convenience
+                • Premium Amenities for Modern Lifestyle
               </li>
 
               <li>
-                • Ideal for Families & Long-Term Living
+                • Well Connected to Moshi, Bhosari & Talawade
               </li>
             </ul>
           </div>
         </div>
 
         {/* Right Image */}
-        <div className="relative flex justify-center">
-          <div className="overflow-hidden rounded-[50px] shadow-2xl">
+        <div className="">
+          <div>
             <img
-              src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1400&auto=format&fit=crop"
+              src={about}
               alt="Family"
-              className="w-full max-w-[700px] h-[520px] object-cover hover:scale-105 transition duration-500"
+              className="w-full max-w-[700px] h-[520px] object-cover"
             />
           </div>
 

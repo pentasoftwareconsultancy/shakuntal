@@ -1,23 +1,21 @@
 import React, { useState } from "react";
+import layout from "../../assets/projectDetailOne/layout.png";
 
 const layouts = [
   {
     id: 1,
     type: "2 BHK",
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
+    image: layout,
   },
   {
     id: 2,
     type: "3 BHK",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+    image: layout,
   },
   {
     id: 3,
     type: "4 BHK",
-    image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop",
+    image: layout,
   },
 ];
 
@@ -67,19 +65,16 @@ const ProjectLayouts = () => {
 
           {/* Heading */}
           <h2 className="text-5xl leading-tight font-medium text-[#1f1f1f]">
-            Spacious Layouts Designed for Riverside Living
+            Practical Layouts Built for Everyday Living
           </h2>
 
           <h3 className="text-4xl font-medium text-[#2b2b2b] mt-5">
-            2, 3 & 4 BHK Apartments
+            2, 3 & 4 BHK Homes
           </h3>
 
           {/* Description */}
           <p className="text-[#6f6f6f] text-xl leading-relaxed mt-6 max-w-2xl">
-            Thoughtfully planned homes that maximize space, natural
-            light, and ventilation. Each layout is designed to offer
-            comfort, openness, and a seamless living experience close
-            to nature.
+            Well-planned homes designed for functionality and ease of movement. Each layout focuses on maximizing usable space while ensuring comfort and convenience for modern families.
           </p>
 
           {/* Button */}
