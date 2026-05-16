@@ -1,5 +1,12 @@
-import React from "react";
 import { ArrowRight } from "lucide-react";
+import { ROUTES } from "../core/constants/routes.constant";
+import { useNavigate } from "react-router-dom";
+import hero from "../assets/ourProject/hero.png";
+import blue from "../assets/ourProject/blue.jpg";
+import dwarka from "../assets/ourProject/dwarka.jpg";
+import forestia from "../assets/ourProject/forestia.jpg";
+import commercial from "../assets/ourProject/commercial.jpg";
+import alenta from "../assets/ourProject/alenta.png";
 
 const projects = [
   {
@@ -7,52 +14,50 @@ const projects = [
     type: "Residential",
     title: "Blue Water",
     location: "Jadhavwadi, Chikhali",
-    image:
-      "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop",
+    image: blue,
+    route: ROUTES.PROJECTDETAILONE,
   },
   {
     id: 2,
     type: "Residential",
     title: "Dwarka",
     location: "Chikhali, PCMC",
-    image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop",
+    image: dwarka,
+    route: ROUTES.PROJECTDETAILTWO,
   },
   {
     id: 3,
     type: "Residential",
     title: "Forestia",
     location: "Dudulgaon, Moshi",
-    image:
-      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop",
+    image: forestia,
+    route: ROUTES.PROJECTDETAILTHREE,
   },
   {
     id: 4,
     type: "Commercial",
     title: "Commercia",
     location: "Chikhali, PCMC, Pune",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+    image: commercial,
+    route: ROUTES.PROJECTDETAILFOUR,
   },
   {
     id: 5,
     type: "Residential",
     title: "Alentia",
     location: "Charholi, Pune",
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
+    image: alenta,
+    route: ROUTES.PROJECTDETAILFIVE,
     grayscale: true,
   },
 ];
 
 const OurProjectPage = () => {
+  const navigate = useNavigate();
   return (
     <section
-      className="relative py-24 px-6 md:px-16 bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop')",
-      }}
+      className="relative h-screen py-12 px-6 md:px-16 bg-cover bg-center"
+      style={{ backgroundImage: `url(${hero})`, }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
@@ -91,7 +96,7 @@ const OurProjectPage = () => {
                 </div>
 
                 {/* Arrow Button */}
-                <button className="min-w-[52px] h-[52px] rounded-full border border-[#b68b07] flex items-center justify-center text-[#b68b07] hover:bg-[#b68b07] hover:text-white transition duration-300">
+                <button className="min-w-[52px] h-[52px] rounded-full border border-[#b68b07] flex items-center justify-center text-[#b68b07] hover:bg-[#b68b07] hover:text-white transition duration-300" onClick={() => project.route && navigate(project.route)}>
                   <ArrowRight size={22} />
                 </button>
               </div>

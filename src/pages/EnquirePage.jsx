@@ -1,13 +1,10 @@
-import React from "react";
+import hero from "../assets/enquire/hero.png";
 
 const EnquirePage = () => {
   return (
     <section
-      className="relative h-screen bg-cover bg-center flex items-center justify-end px-6 md:px-16"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop')",
-      }}
+      className="relative h-[140vh] bg-cover bg-center flex items-center justify-end px-6 md:px-16"
+      style={{ backgroundImage: `url(${hero})`, }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/30"></div>
