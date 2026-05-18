@@ -1,6 +1,6 @@
-import aboutIcon1 from "../../assets/projectDetailTwo/abouticon1.png";
-import aboutIcon2 from "../../assets/projectDetailTwo/abouticon2.png";
-import aboutIcon3 from "../../assets/projectDetailTwo/abouticon3.png";
+import aboutIcon1 from "../../assets/projectDetailTwo/aboutIcon1.png";
+import aboutIcon2 from "../../assets/projectDetailTwo/aboutIcon2.png";
+import aboutIcon3 from "../../assets/projectDetailTwo/aboutIcon3.png";
 import about from "../../assets/projectDetailTwo/about.png";
 import frame from "../../assets/projectDetailTwo/frame.png";
 
