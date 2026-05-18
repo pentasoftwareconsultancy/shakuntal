@@ -1,4 +1,3 @@
-import React from "react";
 
 import project1 from "../../assets/home/client1.png";
 import project2 from "../../assets/home/client2.png";

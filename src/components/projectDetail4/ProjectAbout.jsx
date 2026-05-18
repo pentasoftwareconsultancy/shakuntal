@@ -1,5 +1,4 @@
 import about from "../../assets/projectDetailFour/about.png";
-import { Building2, MapPin } from "lucide-react";
 import aboutIcon1 from "../../assets/projectDetailFour/aboutIcon1.png";
 import aboutIcon2 from "../../assets/projectDetailFour/aboutIcon2.png";
 import aboutIcon3 from "../../assets/projectDetailFour/aboutIcon3.png";
