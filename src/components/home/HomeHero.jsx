@@ -13,7 +13,7 @@ const HomeHero = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/10"></div>
 
       {/* Text */}
       <div className="absolute bottom-36 left-10 z-10">
