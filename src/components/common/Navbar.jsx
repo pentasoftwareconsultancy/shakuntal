@@ -48,6 +48,10 @@ const Navbar = () => {
       route: ROUTES.ENQUIRE,
     },
     {
+      name: 'Chat',
+      action: handleWhatsAppChat,
+    },
+    {
       name: 'Career',
       route: ROUTES.CAREER,
     },
@@ -55,11 +59,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[#000000cc] backdrop-blur-[25px]'
-          : 'bg-[#00000066] backdrop-blur-[25px]'
-      }`}
+      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-[#000000cc] backdrop-blur-[25px]'
+        : 'bg-[#00000066] backdrop-blur-[25px]'
+        }`}
     >
 
       <div className="px-5 md:px-10 lg:px-16 py-4 flex items-center justify-between">
@@ -82,24 +85,23 @@ const Navbar = () => {
           {navItems.map((item, index) => (
             <button
               key={index}
-              onClick={() => navigate(item.route)}
-              className={`text-white text-[17px] transition-all duration-300 hover:text-yellow-400 ${
-                location.pathname === item.route
+              onClick={() => {
+                if (item.action) {
+                  item.action()
+                } else {
+                  navigate(item.route)
+                }
+
+                setIsMenuOpen(false)
+              }}
+              className={`text-white text-[17px] transition-all duration-300 hover:text-yellow-400 ${location.pathname === item.route
                   ? 'text-yellow-400 font-medium'
                   : ''
-              }`}
+                }`}
             >
               {item.name}
             </button>
           ))}
-
-          {/* WhatsApp Chat */}
-          <button
-            onClick={handleWhatsAppChat}
-            className="text-white text-[17px] transition-all duration-300 hover:text-green-400"
-          >
-            Chat
-          </button>
 
           {/* Contact Button */}
           <button
@@ -123,11 +125,10 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ${
-          isMenuOpen
-            ? 'max-h-[500px] opacity-100'
-            : 'max-h-0 opacity-0'
-        }`}
+        className={`lg:hidden overflow-hidden transition-all duration-500 ${isMenuOpen
+          ? 'max-h-[500px] opacity-100'
+          : 'max-h-0 opacity-0'
+          }`}
       >
 
         <div className="bg-[#000000ee] backdrop-blur-xl px-6 py-6 flex flex-col gap-6">
@@ -136,26 +137,22 @@ const Navbar = () => {
             <button
               key={index}
               onClick={() => {
-                navigate(item.route)
+                if (item.action) {
+                  item.action()
+                } else {
+                  navigate(item.route)
+                }
+
                 setIsMenuOpen(false)
               }}
-              className={`text-left text-white text-[17px] transition-all duration-300 hover:text-yellow-400 ${
-                location.pathname === item.route
-                  ? 'text-yellow-400 font-medium'
-                  : ''
-              }`}
+              className={`text-white text-[17px] transition-all duration-300 hover:text-yellow-400 ${location.pathname === item.route
+                ? 'text-yellow-400 font-medium'
+                : ''
+                }`}
             >
               {item.name}
             </button>
           ))}
-
-          {/* WhatsApp */}
-          <button
-            onClick={handleWhatsAppChat}
-            className="text-left text-white text-[17px] hover:text-green-400 transition-all duration-300"
-          >
-            Chat
-          </button>
 
           {/* Contact */}
           <button
