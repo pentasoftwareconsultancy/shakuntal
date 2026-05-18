@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import homebaner from '../../assets/home/bg image.png'
-import ajay from '../../assets/home/Ajay vijay Sir.png'
+import ajay from '../../assets/home/Ajay vIjay Sir.png'
 
 const HomeBanner = () => {
   return (
