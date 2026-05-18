@@ -26,7 +26,7 @@ const ProjectGallery = () => {
       </button>
 
       {/* Heading */}
-      <h2 className="text-5xl md:text-6xl font-medium text-[#1f1f1f] mt-10 leading-tight">
+      <h2 className="text-5xl md:text-6xl font-raleway mt-10 leading-tight">
         Take a closer look at the spaces, design, and lifestyle that define the project.
       </h2>
 

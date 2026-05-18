@@ -17,8 +17,8 @@ const ProjectLayouts = () => {
       {/* Main Content */}
       <div className="gap-20 items-center mt-16">
         <div>
-          <h2 className="text-[56px] leading-[1.2] font-medium text-[#1f1f1f]">
-            Flexible Commercial Spaces Tailored to Your Business Needs
+          <h2 className="text-5xl leading-[1.2] font-raleway">
+            A Destination Trusted by Leading Brands
           </h2>
           <div className="flex items-center gap-10 mt-12">
             {shops.map((shop, index) => (

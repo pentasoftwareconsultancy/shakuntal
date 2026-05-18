@@ -64,16 +64,12 @@ const ProjectLayouts = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-5xl leading-tight font-medium text-[#1f1f1f]">
-            Practical Layouts Built for Everyday Living
+          <h2 className="text-5xl leading-tight font-raleway">
+            Practical Layouts Built for Everyday Living 2, 3 & 4 BHK Homes
           </h2>
 
-          <h3 className="text-4xl font-medium text-[#2b2b2b] mt-5">
-            2, 3 & 4 BHK Homes
-          </h3>
-
           {/* Description */}
-          <p className="text-[#6f6f6f] text-xl leading-relaxed mt-6 max-w-2xl">
+          <p className="text-xl font-poppins leading-relaxed mt-6 max-w-2xl">
             Well-planned homes designed for functionality and ease of movement. Each layout focuses on maximizing usable space while ensuring comfort and convenience for modern families.
           </p>
 
