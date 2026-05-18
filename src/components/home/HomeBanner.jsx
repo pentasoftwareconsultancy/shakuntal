@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import homebaner from '../../assets/home/bg image.png'
 import ajay from '../../assets/home/Ajay vijay Sir.png'
 
@@ -18,7 +19,12 @@ const HomeBanner = () => {
         <div className="relative z-10 h-full px-8 md:px-30 flex items-center">
 
           {/* Left Content */}
-          <div className="max-w-[650px] text-black z-20">
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="max-w-[650px] text-black z-20"
+          >
 
             <h3 className="text-3xl md:text-5xl font-normal leading-[1] font-light">
               Buying a home is one of the most important decisions in a
@@ -36,10 +42,15 @@ const HomeBanner = () => {
               </p>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Right Image From Bottom */}
-          <div className="absolute bottom-0 right-20 z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+            className="absolute bottom-0 right-20 z-10"
+          >
 
             <img
               src={ajay}
@@ -47,7 +58,7 @@ const HomeBanner = () => {
               className="w-[400px] md:w-[600px] object-contain"
             />
 
-          </div>
+          </motion.div>
 
         </div>
 
