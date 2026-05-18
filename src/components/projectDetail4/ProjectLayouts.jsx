@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import shop1 from "../../assets/projectDetailFour/shop1.jpg";
 import shop2 from "../../assets/projectDetailFour/shop2.jpg";
