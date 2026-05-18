@@ -1,16 +1,66 @@
-import React from "react";
+import { useState } from "react";
 import { Phone, Clock3, Mail } from "lucide-react";
+import img from "../assets/contact/img.png";
+import { sendContactEmail } from "../core/services/email.service";
 
 const ContactUsPage = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    location: "",
+    project: "",
+    bhk: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    try {
+      await sendContactEmail(formData);
+
+      alert("Message Sent Successfully");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        location: "",
+        project: "",
+        bhk: "",
+        message: "",
+      });
+
+    } catch (error) {
+      console.log(error);
+      alert("Failed To Send Message");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="bg-[#f5f5f5] py-12 px-4 md:px-10 lg:px-20 overflow-hidden">
-      
+
       {/* Top Section */}
       <div className="grid grid-cols-1 lg:grid-cols-[1.8fr_0.6fr] gap-20 items-center">
-        
+
         {/* Left Form */}
         <div className="w-full max-w-[900px]">
-          
+
           {/* Heading */}
           <div className="mb-6">
             <p className="text-3xl md:text-4xl text-[#1f1f1f] leading-none">
@@ -23,11 +73,11 @@ const ContactUsPage = () => {
           </div>
 
           {/* Form */}
-          <form className="space-y-5">
-            
+          <form className="space-y-5" onSubmit={handleSubmit}>
+
             {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              
+
               {/* Name */}
               <div>
                 <label className="block text-sm mb-2 text-[#2b2b2b]">
@@ -36,8 +86,12 @@ const ContactUsPage = () => {
 
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Enter your name"
                   className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
+                  required
                 />
               </div>
 
@@ -49,15 +103,19 @@ const ContactUsPage = () => {
 
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Enter your email"
                   className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
+                  required
                 />
               </div>
             </div>
 
             {/* Row 2 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              
+
               {/* Phone */}
               <div>
                 <label className="block text-sm mb-2 text-[#2b2b2b]">
@@ -66,8 +124,12 @@ const ContactUsPage = () => {
 
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="Enter phone number"
                   className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
+                  required
                 />
               </div>
 
@@ -79,6 +141,9 @@ const ContactUsPage = () => {
 
                 <input
                   type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
                   placeholder="Enter location"
                   className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
                 />
@@ -87,7 +152,7 @@ const ContactUsPage = () => {
 
             {/* Row 3 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              
+
               {/* Project */}
               <div>
                 <label className="block text-sm mb-2 text-[#2b2b2b]">
@@ -96,6 +161,9 @@ const ContactUsPage = () => {
 
                 <input
                   type="text"
+                  name="project"
+                  value={formData.project}
+                  onChange={handleChange}
                   placeholder="Enter project name"
                   className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
                 />
@@ -109,6 +177,9 @@ const ContactUsPage = () => {
 
                 <input
                   type="text"
+                  name="bhk"
+                  value={formData.bhk}
+                  onChange={handleChange}
                   placeholder="2 BHK / 3 BHK"
                   className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
                 />
@@ -123,31 +194,40 @@ const ContactUsPage = () => {
 
               <textarea
                 rows="5"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Write your message"
                 className="w-full bg-[#ececec] rounded-md px-4 py-4 outline-none resize-none focus:ring-2 focus:ring-[#b68b07]"
+                required
               ></textarea>
             </div>
 
             {/* Button */}
-            <button className="border border-[#b68b07] text-[#b68b07] px-14 h-[52px] rounded-xl text-base font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
-              Submit
+            <button
+              type="submit"
+              disabled={loading}
+              className="border border-[#b68b07] text-[#b68b07] px-14 h-[52px] rounded-xl text-base font-medium hover:bg-[#b68b07] hover:text-white transition duration-300 disabled:opacity-50"
+            >
+              {loading ? "Sending..." : "Submit"}
             </button>
+
           </form>
         </div>
 
         {/* Right Image */}
         <div className="flex justify-center lg:justify-end">
           <img
-            src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop"
+            src={img}
             alt="Couple"
-            className="w-full max-w-[240px] h-[400px] object-cover rounded-md shadow-lg"
+            className="w-full max-w-[400px] h-[550px] object-cover shadow-lg"
           />
         </div>
       </div>
 
       {/* Contact Info */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center mt-20">
-        
+
         {/* Call */}
         <div>
           <div className="flex justify-center mb-4">
@@ -197,14 +277,20 @@ const ContactUsPage = () => {
         </div>
       </div>
 
-      {/* Bottom Map */}
-      <div className="mt-20 overflow-hidden rounded-[20px]">
-        <img
-          src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1600&auto=format&fit=crop"
-          alt="Map"
-          className="w-full h-[220px] object-cover grayscale"
-        />
+      {/* Map */}
+      <div className="overflow-hidden rounded-[24px] mt-10 shadow-md">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3420.3531549587756!2d73.82622427465589!3d18.68133736424473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b7fe03b369d3%3A0x691a5b80b3c1e2fc!2sShakuntal%20Commercia!5e1!3m2!1sen!2sin!4v1779079288238!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full"
+        ></iframe>
       </div>
+
     </section>
   );
 };

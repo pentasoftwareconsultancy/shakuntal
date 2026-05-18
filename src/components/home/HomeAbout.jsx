@@ -136,7 +136,7 @@ const HomeAbout = () => {
               whileHover={{ y: -8 }}
               className="cursor-pointer"
             >
-              <h1 className="text-[70px] md:text-[90px] leading-none font-light text-[#a47c00]">
+              <h1 className="text-[70px] md:text-[90px] leading-none font-abhaya text-[#a47c00]">
                 <Counter
                   target={item.number}
                   suffix={item.suffix}
