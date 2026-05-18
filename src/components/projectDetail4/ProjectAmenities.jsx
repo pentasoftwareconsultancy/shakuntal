@@ -1,52 +1,45 @@
-import {
-  Trees,
-  Dumbbell,
-  ShieldCheck,
-  Building2,
-  Sun,
-  Waves,
-} from "lucide-react";
+import { shops, Offices, showrooms, food, parking, signage, terrace, banquet } from "../icons/Icons";
 
 const amenities = [
   {
     id: 1,
-    title: "Terrace Garden",
-    icon: <Trees size={42} strokeWidth={1.5} />,
+    title: "Shops",
+    icon: shops,
   },
   {
     id: 2,
-    title: "Play Area",
-    icon: <Building2 size={42} strokeWidth={1.5} />,
+    title: "Offices",
+    icon: Offices,
   },
   {
     id: 3,
-    title: "Gymnasium",
-    icon: <Dumbbell size={42} strokeWidth={1.5} />,
+    title: "Showrooms",
+    icon: showrooms,
   },
   {
     id: 4,
-    title: "Yoga Area",
-    icon: <Waves size={42} strokeWidth={1.5} />,
+    title: "Food Court",
+    icon: food,
   },
   {
     id: 5,
-    title: "Solar System",
-    icon: <Sun size={42} strokeWidth={1.5} />,
+    title: "Parking Space",
+    icon: parking,
   },
   {
     id: 6,
-    title: "Rainwater Harvesting",
-    icon: <Trees size={42} strokeWidth={1.5} />,
+    title: "Signage Space",
+    icon: signage,
   },
   {
     id: 7,
-    title: "CCTV Security",
-    icon: <ShieldCheck size={42} strokeWidth={1.5} />,
+    title: "Terrace Dining",
+    icon: terrace,
   },
   {
     id: 8,
-    title: "Community Hall",
-    icon: <Building2 size={42} strokeWidth={1.5} />,
+    title: "Banquet Hall",
+    icon: banquet,
   },
 ];
 
@@ -69,8 +62,12 @@ const ProjectAmenities = () => {
               className="flex flex-col items-center text-center group"
             >
               {/* Icon */}
-              <div className="text-[#1f1f1f] group-hover:text-[#b68b07] transition duration-300">
-                {item.icon}
+              <div className="group-hover:scale-110 transition duration-300">
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-[42px] h-[42px] object-contain"
+                />
               </div>
 
               {/* Title */}

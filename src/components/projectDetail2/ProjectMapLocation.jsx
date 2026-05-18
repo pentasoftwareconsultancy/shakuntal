@@ -23,21 +23,6 @@ const locationData = [
     ],
   },
   {
-    title: "KEY PLACES",
-    places: [
-      ["Chikhali Bus Stop", "3.0 Kms"],
-      ["Spine Road", "5.0 Kms"],
-      ["Tata Motors", "5.4 Kms"],
-      ["Proposed CC", "5.4 Kms"],
-      ["KSB Chowk", "7.0 Kms"],
-      ["Pune Nashik Highway", "7.8 Kms"],
-      ["Telco Road", "7.7 Kms"],
-      ["Thermax Chowk", "7.6 Kms"],
-      ["Mumbai Pune Highway", "10.0 Kms"],
-      ["Nigdi", "11.0 Kms"],
-    ],
-  },
-  {
     title: "Hospitals",
     places: [
       ["Lotus Multispeciality Hospital", "3.4 Kms"],
@@ -59,13 +44,24 @@ const locationData = [
     ],
   },
   {
-    title: "Entertainment",
+    title: "KEY PLACES",
     places: [
-      ["Carnival Cinema, Chinchwad", "10.0 Kms"],
-      ["PVR Cinema", "9.3 Kms"],
-      ["Vishal E-Square, Pimpri", "9.7 Kms"],
+      ["Chikhali Bus Stop", "3.0 Kms"],
+      ["Spine Road", "5.0 Kms"],
+      ["Tata Motors", "5.4 Kms"],
+      ["Proposed ICC", "5.4 Kms"],
+      ["KSB Chowk", "7.0 Kms"],
+      ["Pune Nashik Highway", "7.8 Kms"],
+      ["Telco Road", "7.7 Kms"],
+      ["Thermax Chowk", "7.6 Kms"],
+      ["Mumbai Pune Highway", "10.0 Kms"],
+      ["Nigdi", "11.0 Kms"],
+      ["Chinchwad", "9.2 Kms"],
       ["Akurdi", "9.9 Kms"],
       ["Nashik Phata", "13.0 Kms"],
+      ["PVR Cinema", "9.3 Kms"],
+      ["Carnival Cinema, Chinchwad", "10.0 Kms"],
+      ["Vishal E-Square, Pimpri", "9.7 Kms"],
     ],
   },
 ];
@@ -88,11 +84,14 @@ const ProjectMapLocation = () => {
       </div>
 
       {/* Location Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mt-14">
+      <div className="columns-1 md:columns-2 lg:columns-3 gap-14 mt-14 space-y-14">
         {locationData.map((section, index) => (
-          <div key={index}>
+          <div
+            key={index}
+            className="break-inside-avoid mb-14"
+          >
             {/* Title */}
-            <h3 className="text-[#18312b] text-xl font-semibold uppercase mb-7">
+            <h3 className="text-[#062E2C] text-xl font-bold font-raleway mb-7">
               {section.title}
             </h3>
 
@@ -101,15 +100,15 @@ const ProjectMapLocation = () => {
               {section.places.map((place, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center justify-between gap-4 text-[#4f4f4f] text-lg"
+                  className="flex items-center justify-between gap-4 text-[#062E2C] font-poppins text-lg"
                 >
                   <span className="whitespace-nowrap">
                     {place[0]}
                   </span>
 
-                  <div className="flex-1 border-b border-dashed border-[#7d7d7d]"></div>
+                  <div className="flex-1 border-b border-dashed border-[#062E2C]"></div>
 
-                  <span className="whitespace-nowrap font-medium">
+                  <span className="whitespace-nowrap">
                     {place[1]}
                   </span>
                 </div>

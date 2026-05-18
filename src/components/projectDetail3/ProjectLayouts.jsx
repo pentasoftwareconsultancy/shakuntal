@@ -64,20 +64,13 @@ const ProjectLayouts = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-5xl leading-tight font-medium text-[#1f1f1f]">
-            Spacious Layouts Designed for Riverside Living
+          <h2 className="text-5xl leading-tight font-raleway font-[400]">
+            Layouts That Bring Light, Air, and Comfort Together 2 & 3 BHK Homes
           </h2>
 
-          <h3 className="text-4xl font-medium text-[#2b2b2b] mt-5">
-            2, 3 & 4 BHK Apartments
-          </h3>
-
           {/* Description */}
-          <p className="text-[#6f6f6f] text-xl leading-relaxed mt-6 max-w-2xl">
-            Thoughtfully planned homes that maximize space, natural
-            light, and ventilation. Each layout is designed to offer
-            comfort, openness, and a seamless living experience close
-            to nature.
+          <p className="font-poppins text-xl leading-relaxed mt-6 max-w-2xl">
+            Smartly designed floor plans that ensure efficient space utilization with abundant natural light and ventilation. Every home is crafted for comfortable, balanced, and everyday living.
           </p>
 
           {/* Button */}
