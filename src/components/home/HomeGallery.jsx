@@ -1,4 +1,3 @@
-import React from 'react'
 import group from '../../assets/home/group 42.png'
 
 const HomeGallery = () => {

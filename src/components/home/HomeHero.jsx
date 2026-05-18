@@ -1,4 +1,3 @@
-import React from 'react'
 import homehero from '../../assets/home/homehero.avif'
 
 const HomeHero = () => {

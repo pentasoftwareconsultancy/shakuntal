@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import layout from "../../assets/projectDetailTwo/layout.png";
 
 const layouts = [

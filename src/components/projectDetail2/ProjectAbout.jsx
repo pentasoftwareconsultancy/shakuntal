@@ -1,4 +1,3 @@
-import { Building2, MapPin } from "lucide-react";
 import aboutIcon1 from "../../assets/projectDetailTwo/abouticon1.png";
 import aboutIcon2 from "../../assets/projectDetailTwo/abouticon2.png";
 import aboutIcon3 from "../../assets/projectDetailTwo/abouticon3.png";
