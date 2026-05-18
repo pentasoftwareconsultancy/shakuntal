@@ -3,69 +3,67 @@ const locationData = [
   {
     title: "Shopping Malls / Multiplexes",
     places: [
-      ["SNBP International School", "500 Mtr"],
-      ["Priyadarshani School", "1.5 Kms"],
-      ["City Pride School Moshi", "1.4 Kms"],
-      ["Sri Sri Ravishankar Vidya Mandir", "4.8 Kms"],
-      ["Vishwakalyan English School", "4.0 Kms"],
-      ["AHP School", "4.6 Kms"],
-      ["Sadhu Vaswani International School", "7.4 Kms"],
+      ["Reliance Mall", "12 mins"],
+      ["D-Mart Ravet", "14 mins"],
+      ["Phoenix Market City", "25 mins"],
+      ["Xion Mall, Hinjewadi", "22 mins"],
+      ["E-square Multiplex", "20 mins"],
     ],
   },
   {
     title: "Restaurants / Hotels",
     places: [
-      ["Modern College", "2.8 Kms"],
-      ["IIBM College of Hotel Management", "4.4 Kms"],
-      ["D Y Patil College - Pimpri", "9.2 Kms"],
-      ["MIT ACSC", "8.7 Kms"],
-      ["(PCCOE)", "13 Kms"],
+      ["Subway", "05 mins"],
+      ["McDonald’s", "05 mins"],
+      ["Krishna Pure Veg", "08 mins"],
+      ["Sentosa Resort", "10 mins"],
+      ["Sayaji Hotel", "18 mins"],
     ],
   },
   {
-    title: "KEY PLACES",
+    title: "Important Destinations",
     places: [
-      ["Chikhali Bus Stop", "3.0 Kms"],
-      ["Spine Road", "5.0 Kms"],
-      ["Tata Motors", "5.4 Kms"],
-      ["Proposed CC", "5.4 Kms"],
-      ["KSB Chowk", "7.0 Kms"],
-      ["Pune Nashik Highway", "7.8 Kms"],
-      ["Telco Road", "7.7 Kms"],
-      ["Thermax Chowk", "7.6 Kms"],
-      ["Mumbai Pune Highway", "10.0 Kms"],
-      ["Nigdi", "11.0 Kms"],
+      ["Pune–Mumbai Expressway", "10 mins"],
+      ["Ravet (Mukai Chowk)", "12 mins"],
+      ["Wakad", "15 mins"],
+      ["MCA Cricket Stadium", "18 mins"],
+      ["Baner", "22 mins"],
+      ["Aundh", "24 mins"],
+      ["Pimple Saudagar", "20 mins"],
+      ["Chinchwad", "22 mins"],
+    ],
+  },
+  {
+    title: "Adventure / Leisure Places",
+    places: [
+      ["JSPM College", "12 mins"],
+      ["City Pride School", "12 mins"],
+      ["Adhira Int. School", "14 mins"],
+      ["SB Patil School / College", "15 mins"],
+      ["Symbiosis Institute JSPM", "18 mins"],
+      ["PCP College", "17 mins"],
+      ["Indira College", "18 mins"],
+      ["D Y Patil School", "20 mins"],
+      ["Akshara Int. School", "22 mins"],
+    ],
+  },
+  {
+    title: "Work Hubs / IT Parks",
+    places: [
+      ["Hinjewadi IT Park", "20 mins"],
+      ["Urse MIDC", "28 mins"],
+      ["Chinchwad MIDC", "30 mins"],
+      ["Talegaon MIDC", "35 mins"],
     ],
   },
   {
     title: "Hospitals",
     places: [
-      ["Lotus Multispeciality Hospital", "3.4 Kms"],
-      ["Sainath Hospital", "7.0 Kms"],
-      ["SDH Hospital", "7.0 Kms"],
-      ["YCM Hospital", "9.4 Kms"],
-      ["Lokmanya Hospital", "9.5 Kms"],
-      ["Aditya Birla Memorial Hospital", "12 Kms"],
-    ],
-  },
-  {
-    title: "MALLS / RETAIL MARKET",
-    places: [
-      ["D-Mart, Moshi", "2.4 Kms"],
-      ["Prasanna Gold Fields Complex", "4.2 Kms"],
-      ["Spine City Mall", "7 Kms"],
-      ["City One Mall", "9.3 Kms"],
-      ["El-Pro Chinchwad", "10 Kms"],
-    ],
-  },
-  {
-    title: "Entertainment",
-    places: [
-      ["Carnival Cinema, Chinchwad", "10.0 Kms"],
-      ["PVR Cinema", "9.3 Kms"],
-      ["Vishal E-Square, Pimpri", "9.7 Kms"],
-      ["Akurdi", "9.9 Kms"],
-      ["Nashik Phata", "13.0 Kms"],
+      ["Ojas Hospital", "12 mins"],
+      ["Lokmanya Hospital", "14 mins"],
+      ["Life Point Hospital", "18 mins"],
+      ["Aditya Birla Hospital", "22 mins"],
+      ["Niramaya Hospital", "20 mins"],
     ],
   },
 ];
@@ -92,7 +90,7 @@ const ProjectMapLocation = () => {
         {locationData.map((section, index) => (
           <div key={index}>
             {/* Title */}
-            <h3 className="text-[#18312b] text-xl font-semibold uppercase mb-7">
+            <h3 className="text-[#062E2C] text-xl font-semibold font-raleway uppercase mb-7">
               {section.title}
             </h3>
 
@@ -101,15 +99,15 @@ const ProjectMapLocation = () => {
               {section.places.map((place, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center justify-between gap-4 text-[#4f4f4f] text-lg"
+                  className="flex items-center justify-between gap-4 text-[#062E2C] text-lg"
                 >
-                  <span className="whitespace-nowrap">
+                  <span className="whitespace-nowrap font-poppins">
                     {place[0]}
                   </span>
 
-                  <div className="flex-1 border-b border-dashed border-[#7d7d7d]"></div>
+                  <div className="flex-1 border-b border-dashed border-[#062E2C]"></div>
 
-                  <span className="whitespace-nowrap font-medium">
+                  <span className="whitespace-nowrap font-poppins">
                     {place[1]}
                   </span>
                 </div>
