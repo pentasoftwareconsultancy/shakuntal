@@ -87,11 +87,11 @@ const Footer = () => {
               Home
             </li>
 
-            <li className="hover:text-white transition cursor-pointer" >
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.OURSTORY)}>
               About
             </li>
 
-            <li className="hover:text-white transition cursor-pointer">
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.OURPROJECT)}>
               Our Projects
             </li>
 
@@ -103,7 +103,7 @@ const Footer = () => {
               Gallery
             </li>
 
-            <li className="hover:text-white transition cursor-pointer">
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.CONTACT)}>
               Contact
             </li>
           </ul>
@@ -114,7 +114,7 @@ const Footer = () => {
           <h3 className="text-2xl font-semibold mb-6">Projects</h3>
 
           <ul className="space-y-4 text-[#9b9488] text-sm">
-            <li className="hover:text-white transition cursor-pointer">
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.OURSTORY)}>
               About
             </li>
 
@@ -122,7 +122,7 @@ const Footer = () => {
               Services
             </li>
 
-            <li className="hover:text-white transition cursor-pointer">
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.OURPROJECT)}>
               Our Projects
             </li>
 
@@ -134,7 +134,7 @@ const Footer = () => {
               Latest News
             </li>
 
-            <li className="hover:text-white transition cursor-pointer">
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.CONTACT)}>
               Contact
             </li>
           </ul>
