@@ -1,4 +1,3 @@
-import React from 'react'
 import StoryHero from '../components/ourStory/StoryHero';
 import StoryAbout from '../components/ourStory/StoryAbout';
 import StoryTeam from '../components/ourStory/StoryTeam';

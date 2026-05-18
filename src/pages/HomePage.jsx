@@ -1,4 +1,3 @@
-import React from 'react'
 import HomeHero from '../components/home/HomeHero';
 import HomeService from '../components/home/HomeService';
 import HomeAbout from '../components/home/HomeAbout';

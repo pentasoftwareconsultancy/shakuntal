@@ -1,4 +1,4 @@
-name: Auto Create PR to Default Branch
+name: 01 - Auto Create PR to Development
 
 on:
   push:
@@ -10,25 +10,81 @@ permissions:
   pull-requests: write
 
 jobs:
-  create-pull-request:
+  create-pr:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout Repository
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: temp-pr-${{ github.ref_name }}
-          base: ${{ github.event.repository.default_branch }}
-          title: "Auto PR: ${{ github.ref_name }} → ${{ github.event.repository.default_branch }}"
-          body: |
-            This PR was automatically created from branch `${{ github.ref_name }}`.
+          fetch-depth: 0
 
-            - Source Branch: `${{ github.ref_name }}`
-            - Target Branch: `${{ github.event.repository.default_branch }}`
+      # Step 2: Setup GitHub CLI
+      - name: Install GitHub CLI
+        run: |
+          sudo apt update
+          sudo apt install gh -y
 
-          commit-message: "Auto PR from ${{ github.ref_name }}"
-          delete-branch: true
+      # Step 3: Check if PR already exists
+      - name: Check Existing PR
+        id: check_pr
+        run: |
+          PR_EXISTS=$(gh pr list \
+            --head "${{ github.ref_name }}" \
+            --base development \
+            --json number \
+            --jq '.[0].number')
+
+          if [ -z "$PR_EXISTS" ]; then
+            echo "pr_exists=false" >> $GITHUB_OUTPUT
+          else
+            echo "pr_exists=true" >> $GITHUB_OUTPUT
+            echo "pr_number=$PR_EXISTS" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 4: Create PR if not exists
+      - name: Create Pull Request
+        if: steps.check_pr.outputs.pr_exists == 'false'
+        run: |
+          gh pr create \
+            --base development \
+            --head "${{ github.ref_name }}" \
+            --title "Frontend: ${{ github.ref_name }} → development" \
+            --body "## Feature Ready for Review
+
+          ### Branch Information
+          - Source: ${{ github.ref_name }}
+          - Target: development
+
+          ### Team Lead Checklist
+          - Review code quality
+          - Check logic
+          - Verify security
+          - Verify build stability
+
+          After approval, merge manually into development."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 5: Comment on existing PR
+      - name: Update Existing PR
+        if: steps.check_pr.outputs.pr_exists == 'true'
+        run: |
+          gh pr comment ${{ steps.check_pr.outputs.pr_number }} \
+            --body "✅ New commits pushed and ready for re-review."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 6: Summary
+      - name: Workflow Summary
+        run: |
+          echo "✅ Workflow completed"
+
+          if [ "${{ steps.check_pr.outputs.pr_exists }}" = "false" ]; then
+            echo "📝 New Pull Request created"
+          else
+            echo "📝 Existing Pull Request updated"
+          fi

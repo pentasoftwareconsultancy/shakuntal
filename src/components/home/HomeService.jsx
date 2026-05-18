@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {
   ShieldCheck,
   KeyRound,
@@ -41,7 +41,7 @@ const HomeService = () => {
   const [activeCard, setActiveCard] = useState(0)
 
   return (
-    <section className="w-full bg-[#f7f7f7] px-6 md:px-20 py-24">
+    <section className="w-full px-6 md:px-20 py-24">
 
       {/* Top Content */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">

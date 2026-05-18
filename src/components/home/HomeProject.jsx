@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 import project1 from '../../assets/home/project1.avif'
-import project2 from '../../assets/home/project2.avif'
-import project3 from '../../assets/home/project3.avif'
-import project4 from '../../assets/home/project4.avif'
-import project5 from '../../assets/home/project5.avif'
+import project2 from '../../assets/home/project2.jpg'
+import project3 from '../../assets/home/project3.jpg'
+import project4 from '../../assets/home/project4.jpg'
+import project5 from '../../assets/home/project5.png'
 
 const projectsData = [
   {
@@ -41,83 +41,119 @@ const projectsData = [
 
 const HomeProject = () => {
   const scrollRef = useRef(null)
-  const [isPaused, setIsPaused] = useState(false)
 
   useEffect(() => {
     const slider = scrollRef.current
 
     const autoScroll = setInterval(() => {
-      if (!isPaused && slider) {
+      if (slider) {
         slider.scrollLeft += 1
 
-        // Infinite Scroll
         if (
-          slider.scrollLeft + slider.clientWidth >=
-          slider.scrollWidth
+          slider.scrollLeft >=
+          slider.scrollWidth / 2
         ) {
           slider.scrollLeft = 0
         }
       }
-    }, 15)
+    }, 20)
 
     return () => clearInterval(autoScroll)
-  }, [isPaused])
+  }, [])
+
+  // Duplicate for infinite loop
+  const duplicatedProjects = [
+    ...projectsData,
+    ...projectsData,
+  ]
 
   return (
-    <section className="w-full bg-[#f7f7f7] py-24 px-6 md:px-16">
+    <section className="w-full flex justify-center py-20">
 
-      {/* Projects Slider */}
+      <div className='w-[95%]  overflow-hidden'>
+
+
+      {/* Slider */}
       <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
+        className="
+          flex gap-3 overflow-x-auto
+          scrollbar-hide
+          px-14
+        "
       >
 
-        {projectsData.map((project) => (
+        {duplicatedProjects.map((project, index) => (
           <div
-            key={project.id}
-            className="min-w-[260px] bg-white shadow-md"
+            key={index}
+            className="min-w-[150px] flex-shrink-0"
           >
 
             {/* Image */}
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-[420px] object-cover"
-            />
+            <div className="overflow-hidden">
+
+              <img
+                src={project.image}
+                alt={project.title}
+                className="
+                  w-[300px] h-[360px]
+                  object-cover
+                  hover:scale-105
+                  transition-all duration-500
+                "
+              />
+
+            </div>
 
             {/* Content */}
-            <div className="pt-4 pb-2">
-              <h3 className="text-[28px] font-light text-[#222]">
+            <div className="pt-2">
+
+              <h3 className="text-[18px] font-[400] text-[#2a2a2a] leading-none">
                 {project.title}
               </h3>
 
-              <p className="text-[#8a8a8a] text-[18px] mt-1">
+              <p className="text-[11px] text-[#8c8c8c] mt-1">
                 {project.location}
               </p>
+
             </div>
+
           </div>
         ))}
+
       </div>
 
       {/* Button */}
-      <div className="flex justify-center mt-16">
-        <button className="border border-[#b28a19] text-[#b28a19] px-14 py-4 rounded-xl hover:bg-[#b28a19] hover:text-white transition-all duration-300">
+      <div className="flex justify-center mt-10">
+
+        <button
+          className="
+          border border-[#b28a19]
+          text-[#b28a19]
+          px-12 py-3
+          rounded-lg
+          text-[15px]
+          hover:bg-[#b28a19]
+          hover:text-white
+            transition-all duration-300
+          "
+        >
           Our Projects
         </button>
+
       </div>
 
       {/* Bottom Text */}
-      <div className="text-center mt-10">
-        <p className="text-[#444] text-[22px] leading-[42px] max-w-4xl mx-auto">
+      <div className="text-center mt-6 px-6">
+
+        <p className="text-[#5c5c5c] text-[18px] leading-8 max-w-3xl mx-auto">
           A portfolio of residential and commercial developments
           designed with a focus on functionality, comfort, and lasting value.
         </p>
-      </div>
 
-      {/* Bottom Border */}
-      <div className="w-full h-[1px] bg-[#d9c37b] mt-20"></div>
+      </div>
+          </div>
+
     </section>
   )
 }
