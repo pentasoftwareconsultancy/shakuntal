@@ -1,36 +1,31 @@
 import { useState } from 'react'
-import {
-  ShieldCheck,
-  KeyRound,
-  Building2,
-  MapPin,
-} from 'lucide-react'
+import { assurance, amenities, construction, locations } from "../icons/Icons";
 
 const servicesData = [
   {
     id: 1,
-    icon: <ShieldCheck size={34} />,
+    icon: assurance,
     title: 'Design Assurance',
     description:
       'Layouts carefully planned to maximise usable space and improve everyday living.',
   },
   {
     id: 2,
-    icon: <KeyRound size={34} />,
+    icon: construction,
     title: 'Quality Construction',
     description:
       'Strong structural standards and disciplined execution ensure durability and reliability.',
   },
   {
     id: 3,
-    icon: <Building2 size={34} />,
+    icon: amenities,
     title: 'Thoughtful Amenities',
     description:
       'Facilities designed to support wellness, recreation, and community living.',
   },
   {
     id: 4,
-    icon: <MapPin size={34} />,
+    icon: locations,
     title: 'Strategic Locations',
     description:
       'Projects located in areas that offer strong connectivity and long-term growth potential.',
@@ -48,7 +43,7 @@ const HomeService = () => {
 
         {/* Left */}
         <div>
-          <h1 className="text-[42px] md:text-[64px] leading-tight font-light text-[#111]">
+          <h1 className="text-[32px] md:text-[45px] leading-tight font-raleway font-[400]">
             Life at
             <br />
             Shakuntal Group
@@ -57,7 +52,7 @@ const HomeService = () => {
 
         {/* Right */}
         <div>
-          <p className="text-[#9b9b9b] text-[20px] leading-[40px]">
+          <p className="text-[#858282] font-poppins font-[300] text-[16px]">
             Every project begins with thoughtful planning and responsible
             development. We focus on intelligent layouts, quality
             construction, and spaces designed for long-term comfort.
@@ -79,36 +74,41 @@ const HomeService = () => {
               onMouseEnter={() => setActiveCard(index)}
               className={`
                 relative cursor-pointer
-                p-10 min-h-[320px]
+                p-10 min-h-[280px] rounded-l-xl
                 transition-all duration-500 ease-in-out
                 border border-transparent
 
-                ${
-                  isActive
-                    ? 'bg-[#a88300] text-white scale-105 z-20 shadow-2xl'
-                    : 'bg-white text-[#222] scale-100 z-10 shadow-lg'
+                ${isActive
+                  ? 'bg-[#997708] text-white scale-105 z-20 shadow-2xl'
+                  : 'bg-white text-[#222] scale-100 z-10 shadow-xl'
                 }
               `}
             >
 
               {/* Icon */}
               <div className="mb-10">
-                {service.icon}
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className={`
+                    w-10 h-10 transition-all duration-300
+                    ${isActive ? 'brightness-0 invert' : ''}
+                  `}
+                />
               </div>
 
               {/* Title */}
-              <h3 className="text-[32px] leading-tight font-light">
+              <h3 className="text-[23px] font-raleway font-[400]">
                 {service.title}
               </h3>
 
               {/* Description */}
               <p
                 className={`
-                  text-[18px] leading-[32px] mt-6 transition-all duration-300
-                  ${
-                    isActive
-                      ? 'text-white/90'
-                      : 'text-[#666]'
+                  text-[14px] font-[300] font-poppins transition-all duration-300
+                  ${isActive
+                    ? 'text-white/90'
+                    : 'text-[#666]'
                   }
                 `}
               >

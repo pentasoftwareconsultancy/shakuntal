@@ -24,6 +24,10 @@ import sports from "../../assets/icons/sports.png";
 import swimming from "../../assets/icons/swiming.png";
 import terrace from "../../assets/icons/terrace.png";
 import yoga from "../../assets/icons/yoga.png";
+import assurance from "../../assets/icons/assurance.svg";
+import amenities from "../../assets/icons/amenities.svg";
+import construction from "../../assets/icons/construction.svg";
+import locations from "../../assets/icons/locations.svg";
 
 export {
   banquet,
@@ -52,4 +56,8 @@ export {
   swimming,
   terrace,
   yoga,
+  assurance,
+  amenities,
+  construction,
+  locations,
 };

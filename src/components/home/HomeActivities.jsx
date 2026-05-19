@@ -96,12 +96,9 @@ const HomeActivities = () => {
                 className="w-full h-full object-cover"
               />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40"></div>
-
               {/* Top Tag */}
               <div className="absolute bottom-60 right-140 z-20 bg-white py-2 px-15 rounded-lg">
-                <h2 className="text-sm font-[500] text-black">
+                <h2 className="text-sm font-raleway font-[400] text-[#323232]">
                   CSR Activity's
                 </h2>
               </div>
@@ -112,11 +109,11 @@ const HomeActivities = () => {
                 {/* Card */}
                 <div className="bg-[#997708] border border-white/20 p-10 rounded-[28px] max-w-[650px] text-white shadow-2xl">
 
-                  <h3 className="text-2xl font-[400] mb-5">
+                  <h3 className="text-2xl font-raleway font-[400] mb-2">
                     {activity.title}
                   </h3>
 
-                  <p className="text-sm leading-6 font-[300] text-gray-200">
+                  <p className="text-sm font-poppins font-[300] text-[#ffffff]">
                     {activity.description}
                   </p>
 

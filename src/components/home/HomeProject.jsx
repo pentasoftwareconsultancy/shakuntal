@@ -68,66 +68,67 @@ const HomeProject = () => {
   ]
 
   return (
-    <section className="w-full flex justify-center py-20">
+    <>
+      <section className="w-full flex justify-center py-20">
 
-      <div className='w-[95%]  overflow-hidden'>
+        <div className='w-[90%]  overflow-hidden'>
 
 
-      {/* Slider */}
-      <div
-        ref={scrollRef}
-        className="
+          {/* Slider */}
+          <div
+            ref={scrollRef}
+            className="
           flex gap-3 overflow-x-auto
           scrollbar-hide
           px-14
         "
-      >
-
-        {duplicatedProjects.map((project, index) => (
-          <div
-            key={index}
-            className="min-w-[150px] flex-shrink-0"
           >
 
-            {/* Image */}
-            <div className="overflow-hidden">
+            {duplicatedProjects.map((project, index) => (
+              <div
+                key={index}
+                className="min-w-[150px] flex-shrink-0"
+              >
 
-              <img
-                src={project.image}
-                alt={project.title}
-                className="
-                  w-[300px] h-[360px]
+                {/* Image */}
+                <div className="overflow-hidden">
+
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="
+                  w-[250px] h-[360px]
                   object-cover
                   hover:scale-105
                   transition-all duration-500
                 "
-              />
+                  />
 
-            </div>
+                </div>
 
-            {/* Content */}
-            <div className="pt-2">
+                {/* Content */}
+                <div className="pt-2">
 
-              <h3 className="text-[18px] font-[400] text-[#2a2a2a] leading-none">
-                {project.title}
-              </h3>
+                  <h3 className="text-[18px] font-[400] text-[#2a2a2a] leading-none">
+                    {project.title}
+                  </h3>
 
-              <p className="text-[11px] text-[#8c8c8c] mt-1">
-                {project.location}
-              </p>
+                  <p className="text-[11px] text-[#8c8c8c] mt-1">
+                    {project.location}
+                  </p>
 
-            </div>
+                </div>
+
+              </div>
+            ))}
 
           </div>
-        ))}
 
-      </div>
+          {/* Button */}
+          <div className="flex justify-center mt-10">
 
-      {/* Button */}
-      <div className="flex justify-center mt-10">
-
-        <button
-          className="
+            <button
+              className="
           border border-[#b28a19]
           text-[#b28a19]
           px-12 py-3
@@ -137,24 +138,29 @@ const HomeProject = () => {
           hover:text-white
             transition-all duration-300
           "
-        >
-          Our Projects
-        </button>
+            >
+              Our Projects
+            </button>
 
-      </div>
-
-      {/* Bottom Text */}
-      <div className="text-center mt-6 px-6">
-
-        <p className="text-[#5c5c5c] text-[18px] leading-8 max-w-3xl mx-auto">
-          A portfolio of residential and commercial developments
-          designed with a focus on functionality, comfort, and lasting value.
-        </p>
-
-      </div>
           </div>
 
-    </section>
+          {/* Bottom Text */}
+          <div className="text-center mt-6 px-6">
+
+            <p className="text-[#181A20] font-poppins font-[300] text-[18px] leading-8 max-w-3xl mx-auto">
+              A portfolio of residential and commercial developments
+              designed with a focus on functionality, comfort, and lasting value.
+            </p>
+
+          </div>
+        </div>
+
+      </section>
+      {/* Horizontal Line */}
+      <div className="w-full flex justify-center mt-10">
+        <div className="w-[90%] border-t-2 border-[#9977084A]"></div>
+      </div>
+    </>
   )
 }
 
