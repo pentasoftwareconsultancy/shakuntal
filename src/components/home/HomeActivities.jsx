@@ -131,7 +131,7 @@ const HomeActivities = () => {
 
                   <button
                     onClick={nextSlide}
-                    className="w-14 h-14 rounded-full border border-white/30 bg-white hover:text-black transition duration-300 flex items-center justify-center"
+                    className="w-14 h-14 rounded-full border border-white/30 bg-white/10 hover:bg-white hover:text-black transition duration-300 flex items-center justify-center text-white"
                   >
                     <ChevronRight size={22} />
                   </button>

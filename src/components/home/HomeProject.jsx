@@ -1,10 +1,11 @@
-import { useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import project1 from '../../assets/home/project1.avif'
 import project2 from '../../assets/home/project2.jpg'
 import project3 from '../../assets/home/project3.jpg'
 import project4 from '../../assets/home/project4.jpg'
 import project5 from '../../assets/home/project5.png'
+import { ROUTES } from '../../core/constants/routes.constant'
 
 const projectsData = [
   {
@@ -40,75 +41,41 @@ const projectsData = [
 ]
 
 const HomeProject = () => {
-  const scrollRef = useRef(null)
-
-  useEffect(() => {
-    const slider = scrollRef.current
-
-    const autoScroll = setInterval(() => {
-      if (slider) {
-        slider.scrollLeft += 1
-
-        if (
-          slider.scrollLeft >=
-          slider.scrollWidth / 2
-        ) {
-          slider.scrollLeft = 0
-        }
-      }
-    }, 20)
-
-    return () => clearInterval(autoScroll)
-  }, [])
-
-  // Duplicate for infinite loop
-  const duplicatedProjects = [
-    ...projectsData,
-    ...projectsData,
-  ]
+  const navigate = useNavigate()
 
   return (
     <>
       <section className="w-full flex justify-center py-20">
+        <div className="w-[90%]">
 
-        <div className='w-[90%]  overflow-hidden'>
-
-
-          {/* Slider */}
+          {/* Static Project Grid */}
           <div
-            ref={scrollRef}
             className="
-          flex gap-3 overflow-x-auto
-          scrollbar-hide
-          px-14
-        "
+              grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5
+              gap-6
+            "
           >
-
-            {duplicatedProjects.map((project, index) => (
+            {projectsData.map((project) => (
               <div
-                key={index}
-                className="min-w-[150px] flex-shrink-0"
+                key={project.id}
+                className="w-full"
               >
-
                 {/* Image */}
                 <div className="overflow-hidden">
-
                   <img
                     src={project.image}
                     alt={project.title}
                     className="
-                  w-[250px] h-[360px]
-                  object-cover
-                  hover:scale-105
-                  transition-all duration-500
-                "
+                      w-full h-[360px]
+                      object-cover
+                      hover:scale-105
+                      transition-all duration-500
+                    "
                   />
-
                 </div>
 
                 {/* Content */}
-                <div className="pt-2">
-
+                <div className="pt-3">
                   <h3 className="text-[18px] font-[400] text-[#2a2a2a] leading-none">
                     {project.title}
                   </h3>
@@ -116,46 +83,40 @@ const HomeProject = () => {
                   <p className="text-[11px] text-[#8c8c8c] mt-1">
                     {project.location}
                   </p>
-
                 </div>
-
               </div>
             ))}
-
           </div>
 
           {/* Button */}
           <div className="flex justify-center mt-10">
-
             <button
+              onClick={() => navigate(ROUTES.OURPROJECT)}
               className="
-          border border-[#b28a19]
-          text-[#b28a19]
-          px-12 py-3
-          rounded-lg
-          text-[15px]
-          hover:bg-[#b28a19]
-          hover:text-white
-            transition-all duration-300
-          "
+                border border-[#b28a19]
+                text-[#b28a19]
+                px-12 py-3
+                rounded-lg
+                text-[15px]
+                hover:bg-[#b28a19]
+                hover:text-white
+                transition-all duration-300
+              "
             >
               Our Projects
             </button>
-
           </div>
 
           {/* Bottom Text */}
           <div className="text-center mt-6 px-6">
-
             <p className="text-[#181A20] font-poppins font-[300] text-[18px] leading-8 max-w-3xl mx-auto">
               A portfolio of residential and commercial developments
               designed with a focus on functionality, comfort, and lasting value.
             </p>
-
           </div>
         </div>
-
       </section>
+
       {/* Horizontal Line */}
       <div className="w-full flex justify-center mt-10">
         <div className="w-[90%] border-t-2 border-[#9977084A]"></div>
