@@ -53,21 +53,21 @@ const ContactUsPage = () => {
   };
 
   return (
-    <section className="bg-[#f5f5f5] py-12 px-4 md:px-10 lg:px-20 overflow-hidden">
+    <section className="py-38 px-4 md:px-10 lg:px-20 overflow-hidden">
 
       {/* Top Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1.8fr_0.6fr] gap-20 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] items-center">
 
         {/* Left Form */}
         <div className="w-full max-w-[900px]">
 
           {/* Heading */}
           <div className="mb-6">
-            <p className="text-3xl md:text-4xl text-[#1f1f1f] leading-none">
+            <p className="text-3xl md:text-4xl font-raleway leading-12 font-[400]">
               We'd love to
             </p>
 
-            <h2 className="text-5xl md:text-6xl font-medium text-[#1f1f1f] leading-none mt-2">
+            <h2 className="text-5xl md:text-6xl font-[400] leading-12 mt-1 font-raleway">
               Hear from You
             </h2>
           </div>
@@ -80,7 +80,7 @@ const ContactUsPage = () => {
 
               {/* Name */}
               <div>
-                <label className="block text-sm mb-2 text-[#2b2b2b]">
+                <label className="block text-xl font-poppins font-[300] leading-5 mb-1 text-[#2b2b2b]">
                   Name
                 </label>
 
@@ -90,14 +90,14 @@ const ContactUsPage = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter your name"
-                  className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
+                  className="w-full h-[52px] bg-[#F2F2F2] px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
                   required
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-sm mb-2 text-[#2b2b2b]">
+                <label className="block text-xl font-poppins font-[300] leading-5 mb-1 text-[#2b2b2b]">
                   Email
                 </label>
 
@@ -107,7 +107,7 @@ const ContactUsPage = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email"
-                  className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
+                  className="w-full h-[52px] bg-[#F2F2F2] px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
                   required
                 />
               </div>
@@ -118,7 +118,7 @@ const ContactUsPage = () => {
 
               {/* Phone */}
               <div>
-                <label className="block text-sm mb-2 text-[#2b2b2b]">
+                <label className="block text-xl font-poppins font-[300] leading-5 mb-1 text-[#2b2b2b]">
                   Phone Number
                 </label>
 
@@ -128,14 +128,14 @@ const ContactUsPage = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Enter phone number"
-                  className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
+                  className="w-full h-[52px] bg-[#F2F2F2] px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
                   required
                 />
               </div>
 
               {/* Location */}
               <div>
-                <label className="block text-sm mb-2 text-[#2b2b2b]">
+                <label className="block text-xl font-poppins font-[300] leading-5 mb-1 text-[#2b2b2b]">
                   Location
                 </label>
 
@@ -145,7 +145,7 @@ const ContactUsPage = () => {
                   value={formData.location}
                   onChange={handleChange}
                   placeholder="Enter location"
-                  className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
+                  className="w-full h-[52px] bg-[#F2F2F2] px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
                 />
               </div>
             </div>
@@ -155,7 +155,7 @@ const ContactUsPage = () => {
 
               {/* Project */}
               <div>
-                <label className="block text-sm mb-2 text-[#2b2b2b]">
+                <label className="block text-xl font-poppins font-[300] leading-5 mb-1 text-[#2b2b2b]">
                   Project Name
                 </label>
 
@@ -165,13 +165,13 @@ const ContactUsPage = () => {
                   value={formData.project}
                   onChange={handleChange}
                   placeholder="Enter project name"
-                  className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
+                  className="w-full h-[52px] bg-[#F2F2F2] px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
                 />
               </div>
 
               {/* BHK */}
               <div>
-                <label className="block text-sm mb-2 text-[#2b2b2b]">
+                <label className="block text-xl font-poppins font-[300] leading-5 mb-1 text-[#2b2b2b]">
                   BHK
                 </label>
 
@@ -181,14 +181,14 @@ const ContactUsPage = () => {
                   value={formData.bhk}
                   onChange={handleChange}
                   placeholder="2 BHK / 3 BHK"
-                  className="w-full h-[52px] bg-[#ececec] rounded-md px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
+                  className="w-full h-[52px] bg-[#F2F2F2] px-4 outline-none focus:ring-2 focus:ring-[#b68b07]"
                 />
               </div>
             </div>
 
             {/* Message */}
             <div>
-              <label className="block text-sm mb-2 text-[#2b2b2b]">
+              <label className="block text-xl font-poppins font-[300] leading-5 mb-1 text-[#2b2b2b]">
                 Message
               </label>
 
@@ -198,7 +198,7 @@ const ContactUsPage = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Write your message"
-                className="w-full bg-[#ececec] rounded-md px-4 py-4 outline-none resize-none focus:ring-2 focus:ring-[#b68b07]"
+                className="w-full bg-[#F2F2F2] px-4 py-4 outline-none resize-none focus:ring-2 focus:ring-[#b68b07]"
                 required
               ></textarea>
             </div>
@@ -207,7 +207,7 @@ const ContactUsPage = () => {
             <button
               type="submit"
               disabled={loading}
-              className="border border-[#b68b07] text-[#b68b07] px-14 h-[52px] rounded-xl text-base font-medium hover:bg-[#b68b07] hover:text-white transition duration-300 disabled:opacity-50"
+              className="border border-[#997708] text-[#997708] px-14 h-[43px] w-[240px] rounded-xl text-lg font-[400] font-poppins hover:bg-[#997708] hover:text-white transition duration-300 disabled:opacity-50"
             >
               {loading ? "Sending..." : "Submit"}
             </button>
@@ -220,7 +220,7 @@ const ContactUsPage = () => {
           <img
             src={img}
             alt="Couple"
-            className="w-full max-w-[400px] h-[550px] object-cover shadow-lg"
+            className="w-full max-w-[400px] h-[629px] object-cover shadow-lg"
           />
         </div>
       </div>
@@ -234,11 +234,11 @@ const ContactUsPage = () => {
             <Phone size={30} />
           </div>
 
-          <h3 className="text-2xl font-medium text-[#1f1f1f]">
+          <h3 className="text-2xl font-[400] font-raleway leading-5">
             Call & Whatsapp
           </h3>
 
-          <div className="mt-4 space-y-1 text-[#b68b07] text-lg">
+          <div className="mt-4 text-[#997708] underline text-xl font-poppins font-[300]">
             <p>+91 88888 81672</p>
             <p>+91 88888 81672</p>
           </div>
@@ -250,11 +250,11 @@ const ContactUsPage = () => {
             <Clock3 size={30} />
           </div>
 
-          <h3 className="text-2xl font-medium text-[#1f1f1f]">
+          <h3 className="text-2xl font-[400] font-raleway leading-5">
             Working Hours
           </h3>
 
-          <div className="mt-4 space-y-1 text-[#b68b07] text-lg">
+          <div className="mt-4 text-[#997708] text-xl font-poppins font-[300]">
             <p>Daily: 9 AM - 7 PM</p>
             <p>Friday - Closed</p>
           </div>
@@ -266,11 +266,11 @@ const ContactUsPage = () => {
             <Mail size={30} />
           </div>
 
-          <h3 className="text-2xl font-medium text-[#1f1f1f]">
+          <h3 className="text-2xl font-[400] font-raleway leading-5">
             Write To Us
           </h3>
 
-          <div className="mt-4 space-y-1 text-[#b68b07] text-lg">
+          <div className="mt-4 text-[#997708] text-xl font-poppins font-[300]">
             <p>info@shakuntalgroup.com</p>
             <p>sales@shakuntalgroup.com</p>
           </div>

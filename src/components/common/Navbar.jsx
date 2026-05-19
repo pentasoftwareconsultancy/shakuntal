@@ -94,8 +94,8 @@ const Navbar = () => {
 
                 setIsMenuOpen(false)
               }}
-              className={`text-white text-[17px] transition-all duration-300 hover:text-yellow-400 ${location.pathname === item.route
-                  ? 'text-yellow-400 font-medium'
+              className={`text-white text-sm font-[400] transition-all duration-300 hover:text-[#997708] ${location.pathname === item.route
+                  ? 'text-[#997708] font-[400]'
                   : ''
                 }`}
             >
@@ -106,7 +106,7 @@ const Navbar = () => {
           {/* Contact Button */}
           <button
             onClick={() => navigate(ROUTES.CONTACT)}
-            className="border border-white text-white px-8 py-3 rounded-xl hover:bg-white hover:text-[#02152d] transition-all duration-300"
+            className="border border-[#EFE9D8] text-[#EFE9D8] px-16 text-sm font-poppins font-[400] py-2 rounded-xl hover:bg-[#EFE9D8] hover:text-[#997708] transition-all duration-300"
           >
             Contact Us
           </button>
