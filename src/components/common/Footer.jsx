@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { ROUTES } from "../../core/constants/routes.constant";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png"
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -13,21 +14,19 @@ const Footer = () => {
 
         {/* Left Section */}
         <div>
-          <h2 className="text-[#b68b07] text-4xl font-bold leading-none">
-            शाकुंतल
-          </h2>
+          <img
+            src={logo}
+            alt="logo"
+            className="w-[140px] md:w-[220px] object-contain"
+          />
 
-          <p className="text-[#b68b07] tracking-[3px] mt-1 text-sm">
-            GROUP
-          </p>
-
-          <p className="text-[#9b9488] text-sm leading-7 mt-6 max-w-[280px]">
+          <p className="text-[#A5A49A] font-poppins font-[300] text-sm leading-7 mt-1 max-w-[280px]">
             Thoughtfully planned spaces built with quality, trust, and lasting
             value.
           </p>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4 mt-6">
+          <div className="flex items-center gap-4 mt-8">
 
             {/* Phone */}
             <a
@@ -80,9 +79,18 @@ const Footer = () => {
 
         {/* Explore */}
         <div>
-          <h3 className="text-2xl font-semibold mb-6">Explore</h3>
+          <div className="inline-block">
+            <h3 className="text-2xl font-raleway font-[700] text-[#FFFFFF]">
+              Explore
+            </h3>
 
-          <ul className="space-y-4 text-[#9b9488] text-sm">
+            <div className="flex items-center gap-2 mt-2 mb-6">
+              <div className="w-10 h-[4px] rounded-2xl bg-[#997708]"></div>
+              <div className="w-1 rounded-2xl h-[4px] bg-[#997708]"></div>
+            </div>
+          </div>
+
+          <ul className="space-y-4 text-[#A5A49A] font-poppins font-[300] text-sm">
             <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.HOME)}>
               Home
             </li>
@@ -111,9 +119,18 @@ const Footer = () => {
 
         {/* Projects */}
         <div>
-          <h3 className="text-2xl font-semibold mb-6">Projects</h3>
+          <div className="inline-block">
+            <h3 className="text-2xl font-raleway font-[700] text-[#FFFFFF]">
+              Projects
+            </h3>
 
-          <ul className="space-y-4 text-[#9b9488] text-sm">
+            <div className="flex items-center gap-2 mt-2 mb-6">
+              <div className="w-10 h-[4px] rounded-2xl bg-[#997708]"></div>
+              <div className="w-1 rounded-2xl h-[4px] bg-[#997708]"></div>
+            </div>
+          </div>
+
+          <ul className="space-y-4 text-[#A5A49A] font-poppins font-[300] text-sm">
             <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.OURSTORY)}>
               About
             </li>
@@ -142,9 +159,18 @@ const Footer = () => {
 
         {/* Contact */}
         <div>
-          <h3 className="text-2xl font-semibold mb-6">Contact</h3>
+          <div className="inline-block">
+            <h3 className="text-2xl font-raleway font-[700] text-[#FFFFFF]">
+              Contact
+            </h3>
 
-          <div className="space-y-5 text-[#9b9488] text-sm">
+            <div className="flex items-center gap-2 mt-2 mb-6">
+              <div className="w-10 h-[4px] rounded-2xl bg-[#997708]"></div>
+              <div className="w-1 rounded-2xl h-[4px] bg-[#997708]"></div>
+            </div>
+          </div>
+
+          <div className="space-y-5 text-[#A5A49A] font-poppins font-[300] text-sm">
             <div className="flex items-start gap-3">
               <Phone size={16} className="mt-1 text-white" />
               <p>88888 81672</p>
@@ -183,7 +209,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 text-[#9b9488] text-sm">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 text-[#A5A49A] font-poppins font-[300] text-sm">
 
         <p>
           © All Copyright 2025 by Mindfull Creative Studio

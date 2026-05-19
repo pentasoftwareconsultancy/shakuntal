@@ -5,24 +5,41 @@ import about from "../../assets/projectDetailThree/about.png";
 
 const ProjectAbout = () => {
   return (
-    <section className="bg-[#f5f5f5] py-14 px-6 md:px-16 lg:px-24">
+    <section className="bg-[#f5f5f5] py-8 px-6 md:px-16 lg:px-24">
       {/* Top Info */}
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-10 border-b border-gray-300 pb-10">
-        {/* Logo */}
-        <div className="flex flex-col items-center lg:items-start">
-          <img src={aboutIcon1} alt="Project Logo" className="w-38 h-24" />
-        </div>
-
-        {/* Apartment Info */}
-        <div className="flex items-center gap-5">
-          <img src={aboutIcon2} alt="Apartment Icon" className="w-52 h-12" />
-        </div>
-
-        {/* Location */}
-        <div className="flex items-center gap-5">
-          <img src={aboutIcon3} alt="Location Icon" className="w-52 h-12" />
-        </div>
-      </div>
+     <div className="max-w-[1150px] mx-auto">
+       
+       <div className="flex flex-col lg:flex-row items-center justify-between gap-4 border-b border-gray-300 pb-6">
+   
+         {/* Logo */}
+         <div className="flex justify-center">
+           <img
+             src={aboutIcon1}
+             alt="Project Icon"
+             className="w-32 sm:w-36 md:w-40 lg:w-50 h-auto object-contain"
+           />
+         </div>
+   
+         {/* Apartment Info */}
+         <div className="flex justify-center">
+           <img
+             src={aboutIcon2}
+             alt="Apartment Icon"
+             className="w-40 sm:w-44 md:w-48 lg:w-90 h-auto object-contain"
+           />
+         </div>
+   
+         {/* Location */}
+         <div className="flex justify-center">
+           <img
+             src={aboutIcon3}
+             alt="Location Icon"
+             className="w-40 sm:w-44 md:w-48 lg:w-90 h-auto object-contain"
+           />
+         </div>
+   
+       </div>
+     </div>
 
       {/* Bottom Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mt-20">
@@ -32,17 +49,17 @@ const ProjectAbout = () => {
             Where Everyday Living Feels Closer to Nature
           </h2>
 
-          <p className="text-[#6B6B6B] text-lg mt-6">
+          <p className="text-[#6B6B6B] text-lg mt-6 font-poppins">
             Dudulgaon – Moshi, Pune
           </p>
 
           {/* Highlights */}
           <div className="mt-10">
-            <h3 className="text-lg font-medium text-[#6B6B6B]">
+            <h3 className="text-lg font-medium text-[#6B6B6B] font-poppins">
               Key Highlights
             </h3>
 
-            <ul className="space-y-2 text-[#6B6B6B] text-lg leading-relaxed">
+            <ul className="space-y-2 text-[#6B6B6B] text-lg leading-relaxed font-poppins">
               <li>• Thoughtfully Planned 2 & 3 BHK Residences</li>
 
               <li>

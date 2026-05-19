@@ -1,4 +1,3 @@
-
 import project1 from "../../assets/home/client1.png";
 import project2 from "../../assets/home/client2.png";
 import project3 from "../../assets/home/client3.png";
@@ -12,6 +11,11 @@ import icon2 from "../../assets/home/Group 20225.png";
 import icon3 from "../../assets/home/Group 20226.png";
 import icon4 from "../../assets/home/Group 20227.png";
 
+import iconback1 from "../../assets/home/Groupback20224.png";
+import iconback2 from "../../assets/home/Groupback20225.png";
+import iconback3 from "../../assets/home/Groupback20226.png";
+import iconback4 from "../../assets/home/Groupback20227.png";
+
 const projects = [
   project1,
   project2,
@@ -22,22 +26,26 @@ const projects = [
 
 const sustainabilityItems = [
   {
-    icon: icon1,
+    front: icon1,
+    back: iconback1,
   },
   {
-    icon: icon2,
+    front: icon2,
+    back: iconback2,
   },
   {
-    icon: icon3,
+    front: icon3,
+    back: iconback3,
   },
   {
-    icon: icon4,
+    front: icon4,
+    back: iconback4,
   },
 ];
 
 const HomeClients = () => {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full">
 
       {/* Top Projects Section */}
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -50,13 +58,13 @@ const HomeClients = () => {
         </div>
 
         {/* Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-26">
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-20">
           {projects.map((item, index) => (
             <img
               key={index}
               src={item}
               alt={`project-${index}`}
-              className="h-16 md:h-22 object-contain"
+              className="h-16 md:h-20 object-contain"
             />
           ))}
         </div>
@@ -69,7 +77,6 @@ const HomeClients = () => {
           backgroundImage: `url(${bgImage})`,
         }}
       >
-
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/70"></div>
 
@@ -78,18 +85,36 @@ const HomeClients = () => {
 
           {/* Icons Section */}
           <div className="flex flex-wrap justify-center gap-10 md:gap-16 mb-10">
+
             {sustainabilityItems.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center text-center"
+                className="group perspective"
               >
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="w-24 h-24 md:w-32 md:h-32 object-contain mb-4"
-                />
+                <div className="relative w-28 h-28 md:w-32 md:h-32 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+
+                  {/* Front Icon */}
+                  <div className="absolute inset-0 backface-hidden flex items-center justify-center">
+                    <img
+                      src={item.front}
+                      alt="front-icon"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Back Icon */}
+                  <div className="absolute inset-0 rotate-y-180 backface-hidden flex items-center justify-center">
+                    <img
+                      src={item.back}
+                      alt="back-icon"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                </div>
               </div>
             ))}
+
           </div>
 
           {/* Bottom Heading */}

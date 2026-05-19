@@ -77,7 +77,7 @@ const HomeAbout = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-[40px] md:text-[58px] leading-tight font-raleway font-[300] max-w-[550px]"
+            className="text-4xl md:text-5xl leading-13 font-raleway font-[300] w-full"
           >
             Thoughtfully built spaces for modern living
           </motion.h2>
@@ -87,7 +87,7 @@ const HomeAbout = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-[#3D3B3B] font-poppins font-[275] text-[18px] leading-[34px] mt-10 max-w-[650px]"
+            className="text-[#3D3B3B] font-poppins font-[275] text-lg leading-6 mt-10 max-w-[650px]"
           >
             Shakuntal Group is a trusted real estate developer with more than
             15 years of experience, built on the belief that exceptional spaces
@@ -99,7 +99,7 @@ const HomeAbout = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-[#3D3B3B] font-poppins font-[275] text-[18px] leading-[34px] mt-8 max-w-[650px]"
+            className="text-[#3D3B3B] font-poppins font-[275] text-lg leading-6 mt-8 max-w-[650px]"
           >
             Every project reflects a strong focus on efficient layouts,
             construction quality, and long-term usability, ensuring that homes
@@ -136,14 +136,14 @@ const HomeAbout = () => {
               whileHover={{ y: -8 }}
               className="cursor-pointer"
             >
-              <h1 className="text-[70px] md:text-[90px] leading-none font-abhaya text-[#a47c00]">
+              <h1 className="text-6xl md:text-9xl leading-none font-abhaya text-[#997708]">
                 <Counter
                   target={item.number}
                   suffix={item.suffix}
                 />
               </h1>
 
-              <p className="text-[22px] text-[#181A20] font-poppins font-[400] mt-3">
+              <p className="text-xl leading-5 text-[#181A20] font-poppins font-[400]">
                 {item.title}
               </p>
             </motion.div>

@@ -26,19 +26,20 @@ const HomeBanner = () => {
             className="max-w-[650px] text-black z-20"
           >
 
-            <h3 className="text-3xl md:text-5xl font-raleway font-[400] leading-[1]">
-              Buying a home is one of the most important decisions in a
-              person's life. At Shakuntal Group, we build with that
-              responsibility in mind.
+            <h3 className="text-[#181A20] text-3xl md:text-5xl font-raleway font-[400] leading-14">
+              Buying a home is one of <br/>the most important <br/>
+               decisions in a person's life.<br/> At Shakuntal Group, we
+               <br/> build with that<br/>    responsibility in mind.
             </h3>
 
             <div className="mt-10">
-              <h5 className="text-2xl font-poppins font-[500]">
+              <h5 className="text-2xl font-poppins font-[600]">
                 Ajay Vijay
               </h5>
 
-              <p className="text-lg text-[#997708] font-poppins font-[500] mt-2">
-                Director And Founder Of Shakuntal Group
+              <p className="text-lg text-[#997708] font-poppins font-[600]">
+                Director And Founder Of <br/>
+                 Shakuntal Group
               </p>
             </div>
 
