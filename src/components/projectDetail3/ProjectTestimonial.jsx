@@ -36,7 +36,7 @@ const VideoCard = ({ item, activeId, setActiveId }) => {
   }, []);
 
   return (
-    <div className="relative h-[320px] bg-[#e9e9e9] rounded-[18px] overflow-hidden shadow-md">
+    <div className="relative h-[320px] rounded-[18px] overflow-hidden shadow-md">
       <iframe
         ref={iframeRef}
         src={`https://www.youtube.com/embed/${item.videoId}?enablejsapi=1`}
@@ -70,16 +70,16 @@ const ProjectTestimonial = () => {
   }, []);
 
   return (
-    <section className="bg-[#f5f5f5] py-16 px-6 md:px-16 lg:px-24 relative">
-      <button className="border border-[#b68b07] text-[#b68b07] px-10 py-3 rounded-xl text-sm font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
+    <section className="py-16 px-6 md:px-16 lg:px-24 relative">
+      <button className="border border-[#997708] font-raleway text-[#997708] px-10 py-3 rounded-xl text-sm font-medium hover:bg-[#997708] hover:text-white transition duration-300">
         Testimonials
       </button>
 
-      <h2 className="text-5xl md:text-6xl font-medium text-[#1f1f1f] mt-10 leading-tight font-raileway">
+      <h2 className="text-4xl md:text-5xl font-raleway font-[400] text-[#181A20] mt-10 leading-14 font-raileway">
         Luxury Living Where Comfort Meets
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
         {testimonials.map((item) => (
           <VideoCard
             key={item.id}
