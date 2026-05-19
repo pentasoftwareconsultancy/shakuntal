@@ -56,7 +56,7 @@ const StoryTestimonial = () => {
         {/* Heading & Dots */}
         <div className="flex items-center justify-between mt-10 flex-wrap gap-6">
 
-          <h2 className="text-5xl md:text-6xl font-medium leading-tight text-[#1f1f1f] max-w-6xl font-raleway">
+          <h2 className="text-4xl md:text-5xl font-[300] leading-tight text-[#1D1C1C] max-w-6xl font-raleway">
             Luxury Living Where Comfort Meets
           </h2>
 
