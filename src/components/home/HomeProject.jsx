@@ -93,12 +93,12 @@ const HomeProject = () => {
             <button
               onClick={() => navigate(ROUTES.OURPROJECT)}
               className="
-                border border-[#b28a19]
-                text-[#b28a19]
+                border border-[#997708]
+                text-[#997708]
                 px-12 py-3
                 rounded-lg
                 text-[15px]
-                hover:bg-[#b28a19]
+                hover:bg-[#997708]
                 hover:text-white
                 transition-all duration-300
               "
@@ -109,7 +109,7 @@ const HomeProject = () => {
 
           {/* Bottom Text */}
           <div className="text-center mt-6 px-6">
-            <p className="text-[#181A20] font-poppins font-[300] text-[18px] leading-8 max-w-3xl mx-auto">
+            <p className="text-[#181A20] font-poppins font-[300] text-[18px] leading-7 max-w-3xl mx-auto">
               A portfolio of residential and commercial developments
               designed with a focus on functionality, comfort, and lasting value.
             </p>

@@ -39,11 +39,11 @@ const HomeService = () => {
     <section className="w-full px-6 md:px-20 py-24">
 
       {/* Top Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-16 items-start">
 
         {/* Left */}
         <div>
-          <h1 className="text-[32px] md:text-[45px] leading-tight font-raleway font-[400]">
+          <h1 className="text-[32px] md:text-[45px] leading-13 font-raleway font-[400]">
             Life at
             <br />
             Shakuntal Group
@@ -52,7 +52,7 @@ const HomeService = () => {
 
         {/* Right */}
         <div>
-          <p className="text-[#858282] font-poppins font-[300] text-[16px]">
+          <p className="text-[#858282] leading-7 font-poppins font-[300] text-[16px]">
             Every project begins with thoughtful planning and responsible
             development. We focus on intelligent layouts, quality
             construction, and spaces designed for long-term comfort.
@@ -105,7 +105,7 @@ const HomeService = () => {
               {/* Description */}
               <p
                 className={`
-                  text-[14px] font-[300] font-poppins transition-all duration-300
+                  text-[14px] font-[300] leading-5 font-poppins transition-all duration-300
                   ${isActive
                     ? 'text-white/90'
                     : 'text-[#666]'

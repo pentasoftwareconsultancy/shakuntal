@@ -33,14 +33,14 @@ const blogData = [
 
 const HomeBlog = () => {
   return (
-    <section className="bg-[#e8e2d4] py-20 px-6 md:px-16 lg:px-24">
+    <section className="bg-[#EFE9D8] py-20 px-6 md:px-16 lg:px-24">
       {/* Top Content */}
       <div className="mb-14">
-        <button className="border border-[#a98b4c] text-[#a98b4c] px-10 py-3 rounded-xl text-sm font-medium hover:bg-[#a98b4c] hover:text-white transition duration-300">
+        <button className="border border-[#997708] text-[#997708] px-10 py-3 rounded-xl text-sm font-medium font-poppins hover:bg-[#997708] hover:text-white transition duration-300">
           From Our Blog
         </button>
 
-        <p className="text-[#2f2f2f] text-lg mt-6 max-w-2xl leading-relaxed">
+        <p className="text-[#0B0B0B] font-poppins text-lg mt-6 max-w-2xl leading-relaxed">
           Real estate insights, home living ideas, and updates from our
           developments.
         </p>
@@ -75,11 +75,11 @@ const HomeBlog = () => {
 
             {/* Content */}
             <div className="pt-6">
-              <h4 className="text-[24px] font-medium text-[#2f2f2f] mb-3">
+              <h4 className="text-[24px] font-[400] font-raleway mb-1">
                 {blog.category}
               </h4>
 
-              <p className="text-[#3d3d3d] text-base leading-relaxed max-w-[95%]">
+              <p className="text-base font-poppins font-[300] leading-relaxed max-w-[95%]">
                 {blog.title}
               </p>
             </div>
