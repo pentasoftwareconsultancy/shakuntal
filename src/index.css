@@ -43,10 +43,27 @@ body {
 .font-abhaya {
   font-family: 'Abhaya Libre';
 }
+
 @font-face {
   font-family: 'Apparel';
   src: url('/fonts/Apparel-Bold.woff2') format('woff2'),
        url('/fonts/Apparel-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
