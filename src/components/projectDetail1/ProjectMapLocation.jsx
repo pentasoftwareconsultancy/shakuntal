@@ -71,7 +71,7 @@ const locationData = [
 
 const ProjectMapLocation = () => {
   return (
-    <section className="bg-[#f5f5f5] py-16 px-6 md:px-16 lg:px-24">
+    <section className="py-16 px-6 md:px-16 lg:px-24">
       {/* Map */}
       <div className="overflow-hidden rounded-[24px] shadow-md">
         <iframe
