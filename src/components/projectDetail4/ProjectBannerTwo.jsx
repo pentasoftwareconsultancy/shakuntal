@@ -1,4 +1,4 @@
-import banerTwo from "../../assets/projectDetailOne/banerTwo.png";
+import banerTwo from "../../assets/projectDetailFour/banerTwoo.png";
 
 const ProjectBannerTwo = () => {
   return (
