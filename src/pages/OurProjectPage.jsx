@@ -86,11 +86,11 @@ const OurProjectPage = () => {
               {/* Content */}
               <div className="flex items-end justify-between mt-5">
                 <div>
-                  <h3 className="text-xl font-raleway text-[#2b2b2b] leading-none">
+                  <h3 className="text-base font-[400] font-raleway text-[#181A20] leading-4">
                     {project.title}
                   </h3>
 
-                  <p className="text-[#8a8a8a] font-poppins text-[#717171] text-sm leading-relaxed">
+                  <p className="text-[#717171] font-poppins text-[#717171] text-sm leading-relaxed">
                     {project.location}
                   </p>
                 </div>
