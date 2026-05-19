@@ -1,8 +1,7 @@
 import aboutIcon1 from "../../assets/projectDetailTwo/aboutIcon1.png";
 import aboutIcon2 from "../../assets/projectDetailTwo/aboutIcon2.png";
 import aboutIcon3 from "../../assets/projectDetailTwo/aboutIcon3.png";
-import about from "../../assets/projectDetailTwo/about.png";
-import frame from "../../assets/projectDetailTwo/frame.png";
+import about from "../../assets/projectDetailTwo/about1.png";
 
 const ProjectAbout = () => {
   return (
@@ -67,22 +66,17 @@ const ProjectAbout = () => {
         </div>
 
         {/* Right Image */}
-        {/* Right Image */}
-        <div className="relative flex justify-center items-center">
+        <div className="">
+          <div>
+            <img
+              src={about}
+              alt="Family"
+              className="w-full max-w-[700px] h-[520px] object-fill"
+            />
+          </div>
 
-          {/* Main Image */}
-          <img
-            src={about}
-            alt="Family"
-            className="w-full max-w-[700px] h-[520px] object-bottom"
-          />
-
-          {/* Cloudy Frame Overlay */}
-          <img
-            src={frame}
-            alt="Frame"
-            className="absolute inset-0 w-full max-w-[700px] h-[520px] object-cover pointer-events-none"
-          />
+          {/* Soft Glow Effect */}
+          <div className="absolute inset-0 rounded-[50px] shadow-[0_0_100px_rgba(255,255,255,0.7)] pointer-events-none"></div>
         </div>
       </div>
     </section>
