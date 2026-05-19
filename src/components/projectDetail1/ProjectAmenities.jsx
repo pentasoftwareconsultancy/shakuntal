@@ -45,7 +45,7 @@ const amenities = [
 
 const ProjectAmenities = () => {
   return (
-    <section className="bg-[#f5f5f5] py-20 px-6 md:px-16 lg:px-24">
+    <section className="py-20 px-6 md:px-16 lg:px-24">
       {/* Top Button */}
       <div className="flex justify-center mb-14">
         <button className="border border-[#b68b07] text-[#b68b07] px-12 py-3 rounded-xl text-lg font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
@@ -55,7 +55,7 @@ const ProjectAmenities = () => {
 
       {/* Amenities Box */}
       <div className="border border-[#b68b07] rounded-[40px] py-20 px-8 md:px-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-20 gap-x-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-20">
           {amenities.map((item) => (
             <div
               key={item.id}
@@ -71,7 +71,7 @@ const ProjectAmenities = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-medium text-[#2b2b2b] mt-6 leading-snug">
+              <h3 className="text-base font-[300] font-poppins text-[#1A1A1A] mt-6 leading-4">
                 {item.title}
               </h3>
             </div>
