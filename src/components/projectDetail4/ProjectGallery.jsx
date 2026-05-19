@@ -19,23 +19,23 @@ const galleryImages = [
 
 const ProjectGallery = () => {
   return (
-    <section className="bg-[#f5f5f5] py-16 px-6 md:px-16 lg:px-24">
+    <section className="py-16 px-6 md:px-16 lg:px-24">
       {/* Top Button */}
-      <button className="border border-[#b68b07] text-[#b68b07] px-12 py-3 rounded-xl text-lg font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
+      <button className="border border-[#b68b07] font-raleway text-[#b68b07] px-12 py-3 rounded-xl text-lg font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
         Gallery
       </button>
 
       {/* Heading */}
-      <h2 className="text-5xl md:text-6xl font-raleway mt-10 leading-tight">
+      <h2 className="text-4xl md:text-[45px] font-raleway mt-10 leading-14 font-[400]">
         Luxury Living Where Comfort Meets
       </h2>
 
       {/* Gallery Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-2">
         {galleryImages.map((item) => (
           <div
             key={item.id}
-            className="overflow-hidden rounded-md group"
+            className="overflow-hidden group"
           >
             <img
               src={item.image}
