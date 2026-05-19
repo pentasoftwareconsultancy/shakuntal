@@ -45,7 +45,7 @@ const sustainabilityItems = [
 
 const HomeClients = () => {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full">
 
       {/* Top Projects Section */}
       <div className="max-w-7xl mx-auto px-4 py-12">

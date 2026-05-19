@@ -42,7 +42,7 @@ const HomeQuestions = () => {
   };
 
   return (
-    <section className="bg-[#f5f5f5] py-20 px-6 md:px-16">
+    <section className="py-20 px-6 md:px-16">
       <div className="max-w-4xl mx-auto">
         {/* Top Button */}
         <div className="flex justify-center mb-12">
