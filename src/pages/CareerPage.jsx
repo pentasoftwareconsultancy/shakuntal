@@ -1,3 +1,4 @@
+import hero from "../assets/career/hero.png";
 
 const careers = [
   {
@@ -67,18 +68,15 @@ const careers = [
 
 const CareerPage = () => {
   return (
-    <section className="bg-[#f5f5f5] min-h-screen pb-16">
-      
+    <section className=" min-h-screen pb-16">
+
       {/* Hero Section */}
       <div
-        className="relative h-[320px] bg-cover bg-center flex items-end"
+        className="relative h-[390px] bg-cover bg-center flex items-end"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop')",
+          backgroundImage: `url(${hero})`,
         }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/45"></div>
 
         {/* Content */}
         <div className="relative z-10 px-6 md:px-14 pb-10">
@@ -95,7 +93,7 @@ const CareerPage = () => {
         </div>
 
         {/* Floating Badge */}
-        
+
       </div>
 
       {/* Career List */}
@@ -105,7 +103,7 @@ const CareerPage = () => {
             key={career.id}
             className="w-full bg-white rounded-2xl shadow-md px-8 py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-6 hover:shadow-lg transition duration-300"
           >
-            
+
             {/* Left Content */}
             <div className="max-w-5xl">
               <h3 className="text-2xl md:text-3xl font-medium text-[#2b2b2b]">

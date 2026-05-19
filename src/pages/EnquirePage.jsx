@@ -50,15 +50,15 @@ const EnquirePage = () => {
   };
 
   return (
-    <section
-      className="relative h-[140vh] bg-cover bg-center flex items-center justify-end px-6 md:px-16"
-      style={{ backgroundImage: `url(${hero})` }}
-    >
+  <section
+  className="relative min-h-screen bg-cover bg-center flex items-center justify-end px-6 md:px-16 pt-22"
+  style={{ backgroundImage: `url(${hero})` }}
+>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Form Card */}
-      <div className="relative z-10 w-full max-w-[560px] bg-white/95 backdrop-blur-sm rounded-[24px] p-8 shadow-2xl">
+      <div className="relative z-10 w-full max-w-[560px] bg-white/95 backdrop-blur-sm rounded-b-[24px] p-8 shadow-2xl">
 
         {/* Heading */}
         <h2 className="text-[32px] leading-tight font-medium text-[#2b2b2b] mb-6">
