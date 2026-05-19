@@ -9,19 +9,19 @@ const ProjectLayouts = () => {
   const shops = [shop1, shop2, shop3];
 
   return (
-    <section className="bg-[#f5f5f5] py-20 px-6 md:px-16 lg:px-24">
+    <section className="py-20 px-6 md:px-16 lg:px-24">
       {/* Top Button */}
-      <button className="border border-[#b68b07] text-[#b68b07] px-10 py-3 rounded-xl text-lg font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
+      <button className="border border-[#b68b07] font-raleway text-[#b68b07] px-10 py-3 rounded-xl text-lg font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
         Shops
       </button>
 
       {/* Main Content */}
       <div className="gap-20 items-center mt-16">
         <div>
-          <h2 className="text-5xl leading-[1.2] font-raleway">
+          <h2 className="text-4xl md:text-[45px] font-raleway mt-10 leading-14 font-[400]">
             A Destination Trusted by Leading Brands
           </h2>
-          <div className="flex items-center gap-10 mt-12">
+          <div className="flex items-center gap-10 mt-4">
             {shops.map((shop, index) => (
               <div
                 key={index}
