@@ -3,7 +3,7 @@ import project1 from "../../assets/home/client1.png";
 import project2 from "../../assets/home/client2.png";
 import project3 from "../../assets/home/client3.png";
 import project4 from "../../assets/home/client4.png";
-import project5 from "../../assets/home/client4.png";
+import project5 from "../../assets/home/client5.png";
 
 import bgImage from "../../assets/home/image 25.png";
 
@@ -50,13 +50,13 @@ const HomeClients = () => {
         </div>
 
         {/* Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-14">
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-26">
           {projects.map((item, index) => (
             <img
               key={index}
               src={item}
               alt={`project-${index}`}
-              className="h-14 md:h-16 object-contain"
+              className="h-16 md:h-22 object-contain"
             />
           ))}
         </div>
@@ -71,7 +71,7 @@ const HomeClients = () => {
       >
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/70"></div>
 
         {/* Content */}
         <div className="relative z-10 w-full px-6 md:px-16 py-14 text-white flex flex-col items-center justify-end h-full">
@@ -93,7 +93,7 @@ const HomeClients = () => {
           </div>
 
           {/* Bottom Heading */}
-          <h3 className="text-3xl md:text-5xl font-light text-center">
+          <h3 className="text-3xl md:text-5xl font-raleway text-center">
             Sustainable practices
           </h3>
         </div>
