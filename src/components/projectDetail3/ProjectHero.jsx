@@ -5,7 +5,6 @@ const ProjectHero = () => {
   return (
     <div>
       <img src={projectdetailhero} alt="Project Hero" className='w-full' />
-
     </div>
   )
 }
