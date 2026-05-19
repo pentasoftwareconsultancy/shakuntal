@@ -2,7 +2,7 @@ import homehero from '../../assets/home/homehero.avif'
 
 const HomeHero = () => {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-[120vh]">
 
       {/* Background Image */}
       <img
@@ -11,12 +11,9 @@ const HomeHero = () => {
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/10"></div>
-
       {/* Text */}
-      <div className="absolute bottom-36 left-10 z-10">
-        <h1 className="text-white text-6xl font-extralight leading-tight">
+      <div className="absolute bottom-16 left-10 z-10">
+        <h1 className="text-white text-[56px] font-raleway font-[300] leading-tight">
           A home is more than
           <br />
           a structure, It’s a
