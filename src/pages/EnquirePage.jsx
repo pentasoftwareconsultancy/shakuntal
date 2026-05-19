@@ -50,18 +50,18 @@ const EnquirePage = () => {
   };
 
   return (
-  <section
-  className="relative min-h-screen bg-cover bg-center flex items-center justify-end px-6 md:px-16 pt-22"
-  style={{ backgroundImage: `url(${hero})` }}
->
+    <section
+      className="relative bg-cover bg-center flex items-center justify-end px-6 md:px-16 py-24"
+      style={{ backgroundImage: `url(${hero})` }}
+    >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
 
       {/* Form Card */}
-      <div className="relative z-10 w-full max-w-[560px] bg-white/95 backdrop-blur-sm rounded-b-[24px] p-8 shadow-2xl">
+      <div className="relative z-10 w-full max-w-[560px] bg-white/95 backdrop-blur-sm rounded-b-[24px] p-10 shadow-2xl">
 
         {/* Heading */}
-        <h2 className="text-[32px] leading-tight font-medium text-[#2b2b2b] mb-6">
+        <h2 className="text-3xl font-raleway leading-9 font-[400] text-[#2b2b2b] mb-6">
           Your Passage into opulent living begins now
         </h2>
 
@@ -70,7 +70,7 @@ const EnquirePage = () => {
 
           {/* Name */}
           <div>
-            <label className="block text-[#2f2f2f] text-sm font-medium mb-2">
+            <label className="block text-sm font-medium mb-1">
               Name
             </label>
 
@@ -80,14 +80,14 @@ const EnquirePage = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              className="w-full h-[46px] bg-[#f1f1f1] rounded-lg px-4 outline-none border border-transparent focus:border-[#b68b07]"
+              className="w-full h-[46px] bg-[#F2F2F2] px-4 outline-none border border-transparent focus:border-[#b68b07]"
               required
             />
           </div>
 
           {/* Email */}
           <div>
-            <label className="block text-[#2f2f2f] text-sm font-medium mb-2">
+            <label className="block text-sm font-medium mb-1">
               Email
             </label>
 
@@ -97,14 +97,14 @@ const EnquirePage = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className="w-full h-[46px] bg-[#f1f1f1] rounded-lg px-4 outline-none border border-transparent focus:border-[#b68b07]"
+              className="w-full h-[46px] bg-[#F2F2F2] px-4 outline-none border border-transparent focus:border-[#b68b07]"
               required
             />
           </div>
 
           {/* Mobile */}
           <div>
-            <label className="block text-[#2f2f2f] text-sm font-medium mb-2">
+            <label className="block text-sm font-medium mb-1">
               Mobile
             </label>
 
@@ -114,14 +114,14 @@ const EnquirePage = () => {
               value={formData.mobile}
               onChange={handleChange}
               placeholder="Enter mobile number"
-              className="w-full h-[46px] bg-[#f1f1f1] rounded-lg px-4 outline-none border border-transparent focus:border-[#b68b07]"
+              className="w-full h-[46px] bg-[#F2F2F2] px-4 outline-none border border-transparent focus:border-[#b68b07]"
               required
             />
           </div>
 
           {/* Project */}
           <div>
-            <label className="block text-[#2f2f2f] text-sm font-medium mb-2">
+            <label className="block text-sm font-medium mb-1">
               Project Name
             </label>
 
@@ -131,13 +131,13 @@ const EnquirePage = () => {
               value={formData.project}
               onChange={handleChange}
               placeholder="Enter project name"
-              className="w-full h-[46px] bg-[#f1f1f1] rounded-lg px-4 outline-none border border-transparent focus:border-[#b68b07]"
+              className="w-full h-[46px] bg-[#F2F2F2] px-4 outline-none border border-transparent focus:border-[#b68b07]"
             />
           </div>
 
           {/* Comments */}
           <div>
-            <label className="block text-[#2f2f2f] text-sm font-medium mb-2">
+            <label className="block text-sm font-medium mb-1">
               Comments
             </label>
 
@@ -147,7 +147,7 @@ const EnquirePage = () => {
               value={formData.comments}
               onChange={handleChange}
               placeholder="Write your comments"
-              className="w-full bg-[#f1f1f1] rounded-lg px-4 py-3 outline-none resize-none border border-transparent focus:border-[#b68b07]"
+              className="w-full h-[46px] bg-[#F2F2F2] px-4 outline-none resize-none border border-transparent focus:border-[#b68b07]"
             ></textarea>
           </div>
 
@@ -155,7 +155,7 @@ const EnquirePage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full h-[48px] rounded-xl border border-[#b68b07] text-[#b68b07] font-medium hover:bg-[#b68b07] hover:text-white transition duration-300"
+            className="w-[252px] h-[48px] rounded-xl border border-[#997708] text-[#997708] font-medium hover:bg-[#997708] hover:text-white transition duration-300"
           >
             {loading ? "Sending..." : "Enquire Now"}
           </button>

@@ -72,20 +72,20 @@ const CareerPage = () => {
 
       {/* Hero Section */}
       <div
-        className="relative h-[390px] bg-cover bg-center flex items-end"
+        className="relative h-[390px] bg-cover bg-center flex items-end rounded-3xl"
         style={{
           backgroundImage: `url(${hero})`,
         }}
       >
 
         {/* Content */}
-        <div className="relative z-10 px-6 md:px-14 pb-10">
-          <h1 className="text-white text-5xl md:text-6xl font-medium leading-tight">
+        <div className="relative z-10 px-6 md:px-20 pb-10">
+          <h1 className="text-white text-4xl md:text-6xl font-[400] font-raleway leading-14">
             Build Your <br />
             Career With Us
           </h1>
 
-          <p className="text-white/80 text-sm md:text-base mt-4 max-w-2xl">
+          <p className="text-white text-sm mt-2 font-poppins font-[300] leading-6">
             Explore exciting opportunities and grow your career in an
             environment that values dedication, teamwork, and continuous
             learning.
@@ -97,30 +97,30 @@ const CareerPage = () => {
       </div>
 
       {/* Career List */}
-      <div className="w-full px-4 md:px-8 lg:px-12 mt-16 space-y-5">
+      <div className="w-full px-4 md:px-20 mt-16 space-y-5">
         {careers.map((career) => (
           <div
             key={career.id}
-            className="w-full bg-white rounded-2xl shadow-md px-8 py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-6 hover:shadow-lg transition duration-300"
+            className="w-full bg-white rounded-xl shadow-md px-10 py-9 flex flex-col md:flex-row md:items-center md:justify-between gap-10 hover:shadow-lg transition duration-300"
           >
 
             {/* Left Content */}
             <div className="max-w-5xl">
-              <h3 className="text-2xl md:text-3xl font-medium text-[#2b2b2b]">
+              <h3 className="text-xl md:text-2xl font-[400] leading-4 font-raleway text-[#181A20]">
                 {career.title}
               </h3>
 
-              <p className="text-[#666] text-sm md:text-base leading-relaxed mt-3">
+              <p className="text-[#181A20] text-sm leading-5 font-poppins font-[300] mt-2 max-w-3xl">
                 {career.description}
               </p>
 
-              <p className="text-[#8b8b8b] text-sm mt-4">
+              <p className="text-[#8b8b8b] text-sm leading-5 font-poppins font-[400] mt-1">
                 {career.experience}
               </p>
             </div>
 
             {/* Button */}
-            <button className="min-w-[160px] h-[50px] border border-[#b68b07] rounded-xl text-[#b68b07] text-base font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
+            <button className="min-w-[240px] h-[43px] border border-[#997708] rounded-xl text-[#997708] text-base font-medium hover:bg-[#997708] hover:text-white transition duration-300">
               Join Us
             </button>
           </div>

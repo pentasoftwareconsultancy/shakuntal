@@ -3,7 +3,7 @@ import comingsoon from '../../assets/projectDetailFive/COMING SOON.png';
 
 const ProjectAbout = () => {
   return (
-    <div className='flex justify-center gap-16 py-8'>
+    <div className='flex justify-center gap-16 pt-8 pb-4'>
       <img src={aboutIcon1} alt="About Icon 1" className='w-1/6 h-24' />
       <img src={comingsoon} alt="Coming Soon" className='w-1/2 h-24' />
     </div>
