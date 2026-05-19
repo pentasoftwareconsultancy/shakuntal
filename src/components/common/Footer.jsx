@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { ROUTES } from "../../core/constants/routes.constant";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png"
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -13,13 +14,14 @@ const Footer = () => {
 
         {/* Left Section */}
         <div>
-          <h2 className="text-[#b68b07] text-4xl font-bold leading-none">
-            शाकुंतल
-          </h2>
-
-          <p className="text-[#b68b07] tracking-[3px] mt-1 text-sm">
-            GROUP
-          </p>
+           <div
+        >
+          <img
+            src={logo}
+            alt="logo"
+            className="w-[110px] md:w-[140px] object-contain"
+          />
+        </div>
 
           <p className="text-[#9b9488] text-sm leading-7 mt-6 max-w-[280px]">
             Thoughtfully planned spaces built with quality, trust, and lasting
