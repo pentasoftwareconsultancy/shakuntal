@@ -86,16 +86,18 @@ const StoryTeam = () => {
             "
                 >
 
-                  <h3 className="text-white text-[34px] font-light leading-tight">
+                  
+
+                  <p className="text-white text-[17px] leading-[1.6] mt-10 font-poppins">
+                    {selectedMember.description}
+                  </p>
+
+                  <h3 className="text-white text-[34px] font-light leading-tight pt-10 font-raleway">
                     {selectedMember.name}
                   </h3>
 
-                  <p className="text-white text-[18px] mt-1">
+                  <p className="text-white text-[18px] mt-1 font-raleway">
                     {selectedMember.role}
-                  </p>
-
-                  <p className="text-white text-[17px] leading-[1.6] mt-10">
-                    {selectedMember.description}
                   </p>
                 </div>
               )}
@@ -136,17 +138,16 @@ const StoryTeam = () => {
                 </div>
 
                 {/* Bottom Content */}
-                <div className="pt-4 transition-all duration-500">
-
-                  <h3 className="text-[32px] leading-none font-light text-black">
-                    {member.name}
-                  </h3>
-
-                  <p className="text-[#4f4f4f] text-[18px] mt-1">
-                    {member.role}
-                  </p>
-
-                </div>
+                {!isSelected && (
+                  <div className="pt-4 transition-all duration-500">
+                    <h3 className="text-[32px] leading-none font-light text-black">
+                      {member.name}
+                    </h3>
+                    <p className="text-[#4f4f4f] text-[18px] mt-1">
+                      {member.role}
+                    </p>
+                  </div>
+                )}
 
               </div>
 
