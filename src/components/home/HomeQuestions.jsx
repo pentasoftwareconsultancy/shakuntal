@@ -42,11 +42,11 @@ const HomeQuestions = () => {
   };
 
   return (
-    <section className="bg-[#f5f5f5] py-20 px-6 md:px-16">
+    <section className="py-20 px-6 md:px-16">
       <div className="max-w-4xl mx-auto">
         {/* Top Button */}
         <div className="flex justify-center mb-12">
-          <button className="border border-[#b08a2f] text-[#b08a2f] px-8 py-3 rounded-xl text-sm font-medium hover:bg-[#b08a2f] hover:text-white transition duration-300">
+          <button className="border border-[#997708] text-[#997708] px-8 py-3 rounded-xl text-sm font-medium hover:bg-[#997708] hover:text-white transition duration-300">
             Have More Question?
           </button>
         </div>
@@ -58,7 +58,7 @@ const HomeQuestions = () => {
               key={faq.id}
               className={`rounded-2xl transition-all duration-300 ${
                 activeId === faq.id
-                  ? "bg-[#ded3be] p-10"
+                  ? "bg-[#B07E5026] p-10"
                   : "bg-transparent border-b border-gray-200 pb-5"
               }`}
             >
@@ -67,11 +67,11 @@ const HomeQuestions = () => {
                 onClick={() => toggleFAQ(faq.id)}
                 className="w-full flex items-center justify-between text-left"
               >
-                <h3 className="text-[22px] font-medium text-[#2f2f2f]">
+                <h3 className="text-[22px] font-[400] font-raleway text-[#1A1A1A]">
                   {faq.question}
                 </h3>
 
-                <span className="text-[#2f2f2f]">
+                <span className="text-[#1A1A1A]">
                   {activeId === faq.id ? (
                     <Minus size={28} />
                   ) : (
@@ -82,7 +82,7 @@ const HomeQuestions = () => {
 
               {/* Answer */}
               {activeId === faq.id && (
-                <p className="text-[#4b4b4b] text-base leading-relaxed mt-6 max-w-3xl">
+                <p className="text-[#1A1A1A] font-poppins font-[300] text-base leading-relaxed mt-6 max-w-3xl">
                   {faq.answer}
                 </p>
               )}

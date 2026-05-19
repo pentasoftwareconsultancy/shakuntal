@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import homeactivity1 from "../../assets/home/homeactivity1.png";
 import homeactivity2 from "../../assets/home/homeactivity2.png";
@@ -96,45 +96,50 @@ const HomeActivities = () => {
                 className="w-full h-full object-cover"
               />
 
-              {/* Top Tag */}
-              <div className="absolute bottom-60 right-140 z-20 bg-white py-2 px-15 rounded-lg">
-                <h2 className="text-sm font-raleway font-[400] text-[#323232]">
-                  CSR Activity's
-                </h2>
-              </div>
+              {/* Content Group */}
+              <div className="absolute bottom-10 right-10 z-20 flex flex-col items-start gap-2">
 
-              {/* Content Card + Buttons */}
-              <div className="absolute bottom-10 right-10 z-20 flex items-end gap-6">
-
-                {/* Card */}
-                <div className="bg-[#997708] border border-white/20 p-10 rounded-[28px] max-w-[650px] text-white shadow-2xl">
-
-                  <h3 className="text-2xl font-raleway font-[400] mb-2">
-                    {activity.title}
-                  </h3>
-
-                  <p className="text-sm font-poppins font-[300] text-[#ffffff]">
-                    {activity.description}
-                  </p>
-
+                {/* Top Tag */}
+                <div className="bg-white py-2 px-10 rounded-lg">
+                  <h2 className="text-sm font-raleway font-[400] text-[#323232]">
+                    CSR Activity's
+                  </h2>
                 </div>
 
-                {/* Navigation Buttons */}
-                <div className="flex flex-col gap-4 mb-2">
+                {/* Card + Buttons */}
+                <div className="flex items-center gap-6">
 
-                  <button
-                    onClick={prevSlide}
-                    className="w-14 h-14 rounded-full border border-white/30 bg-white/10 hover:bg-white hover:text-black transition duration-300 flex items-center justify-center text-white"
-                  >
-                    <ChevronLeft size={22} />
-                  </button>
+                  {/* Card */}
+                  <div className="bg-[#997708] border border-white/20 p-10 rounded-[28px] max-w-[650px] text-white shadow-2xl">
 
-                  <button
-                    onClick={nextSlide}
-                    className="w-14 h-14 rounded-full border border-white/30 bg-white/10 hover:bg-white hover:text-black transition duration-300 flex items-center justify-center text-white"
-                  >
-                    <ChevronRight size={22} />
-                  </button>
+                    <h3 className="text-2xl font-raleway font-[400] mb-3">
+                      {activity.title}
+                    </h3>
+
+                    <p className="text-sm font-poppins font-[300] leading-4 text-[#ffffff]">
+                      {activity.description}
+                    </p>
+
+                  </div>
+
+                  {/* Navigation Buttons */}
+                  <div className="flex flex-col gap-4 mb-2">
+
+                    <button
+                      onClick={prevSlide}
+                      className="w-14 h-14 rounded-full bg-[#F7F7F7] hover:bg-[#997708] hover:text-[#F7F7F7] transition duration-300 flex items-center justify-center text-[#997708]"
+                    >
+                      <ArrowLeft size={22} />
+                    </button>
+
+                    <button
+                      onClick={nextSlide}
+                      className="w-14 h-14 rounded-full bg-[#F7F7F7] hover:bg-[#997708] hover:text-[#F7F7F7] transition duration-300 flex items-center justify-center text-[#997708]"
+                    >
+                      <ArrowRight size={22} />
+                    </button>
+
+                  </div>
 
                 </div>
 
@@ -148,22 +153,21 @@ const HomeActivities = () => {
 
       </div>
 
-        {/* Slider Dots */}
-        <div className="absolute pt-3 left-1/2 -translate-x-1/2 flex items-center gap-3 z-30">
+      {/* Slider Dots */}
+      <div className="absolute pt-3 left-1/2 -translate-x-1/2 flex items-center gap-3 z-30">
 
-          {activities.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`rounded-full transition-all duration-300 ${
-                currentSlide === index
-                  ? "w-3 h-3 bg-[#b68b07]"
-                  : "w-3 h-3 bg-gray-300"
+        {activities.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`rounded-full transition-all duration-300 ${currentSlide === index
+                ? "w-3 h-3 bg-[#b68b07]"
+                : "w-3 h-3 bg-gray-300"
               }`}
-            />
-          ))}
+          />
+        ))}
 
-        </div>
+      </div>
     </div>
   );
 };
