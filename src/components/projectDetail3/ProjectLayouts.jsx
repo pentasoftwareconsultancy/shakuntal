@@ -13,11 +13,6 @@ const layouts = [
     type: "3 BHK",
     image: layout,
   },
-  {
-    id: 3,
-    type: "4 BHK",
-    image: layout,
-  },
 ];
 
 const ProjectLayouts = () => {
@@ -28,9 +23,9 @@ const ProjectLayouts = () => {
   );
 
   return (
-    <section className="bg-[#f5f5f5] py-20 px-6 md:px-16 lg:px-24">
+    <section className="py-20 px-6 md:px-16 lg:px-24">
       {/* Top Button */}
-      <button className="border border-[#b68b07] text-[#b68b07] px-10 py-3 rounded-xl text-lg font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
+      <button className="border border-[#b68b07] font-raleway text-[#b68b07] px-10 py-3 rounded-xl text-lg font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
         Floor Plans & Layouts
       </button>
 
@@ -53,7 +48,7 @@ const ProjectLayouts = () => {
               <button
                 key={item.id}
                 onClick={() => setActiveTab(item.type)}
-                className={`px-12 h-[54px] rounded-xl border text-lg font-medium transition duration-300 ${
+                className={`px-12 h-[54px] rounded-xl font-raleway border text-lg font-medium transition duration-300 ${
                   activeTab === item.type
                     ? "bg-[#b68b07] text-white border-[#b68b07]"
                     : "border-[#b68b07] text-[#b68b07] hover:bg-[#b68b07] hover:text-white"
@@ -65,17 +60,17 @@ const ProjectLayouts = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-5xl leading-tight font-raleway font-[400]">
-            Layouts That Bring Light, Air, and Comfort Together 2 & 3 BHK Homes
+          <h2 className="text-4xl leading-11 font-[400] font-raleway">
+            Layouts That Bring Light, Air, and<br /> Comfort Together<br /> 2 & 3 BHK Homes
           </h2>
 
           {/* Description */}
-          <p className="font-poppins text-xl leading-relaxed mt-6 max-w-2xl">
+          <p className="text-xl font-poppins font-extralight leading-relaxed mt-6 max-w-2xl">
             Smartly designed floor plans that ensure efficient space utilization with abundant natural light and ventilation. Every home is crafted for comfortable, balanced, and everyday living.
           </p>
 
           {/* Button */}
-          <button className="mt-12 border border-[#b68b07] text-[#b68b07] px-12 h-[58px] rounded-xl text-lg font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
+          <button className="mt-12 border font-poppins border-[#b68b07] text-[#b68b07] px-12 h-[58px] rounded-xl text-lg font-medium hover:bg-[#b68b07] hover:text-white transition duration-300">
             Download Brochure
           </button>
         </div>
