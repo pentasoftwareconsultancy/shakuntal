@@ -70,7 +70,7 @@ const ProjectLayouts = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-lg font-poppins leading-7 font-extralight mt-6 max-w-2xl">
+          <p className="text-xl font-poppins font-extralight leading-relaxed mt-6 max-w-2xl">
             Well-planned homes designed for functionality and ease of movement. Each layout focuses on maximizing usable space while ensuring comfort and convenience for modern families.
           </p>
 
