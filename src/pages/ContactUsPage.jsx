@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Phone, Clock3, Mail } from "lucide-react";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaClock } from "react-icons/fa6";
+import { HiMail } from "react-icons/hi";
 import img from "../assets/contact/img.png";
 import { sendContactEmail } from "../core/services/email.service";
 
@@ -231,7 +233,7 @@ const ContactUsPage = () => {
         {/* Call */}
         <div>
           <div className="flex justify-center mb-4">
-            <Phone size={30} />
+            <FaPhoneAlt size={30} />
           </div>
 
           <h3 className="text-2xl font-[400] font-raleway leading-5">
@@ -247,7 +249,7 @@ const ContactUsPage = () => {
         {/* Working Hours */}
         <div>
           <div className="flex justify-center mb-4">
-            <Clock3 size={30} />
+            <FaClock size={30} />
           </div>
 
           <h3 className="text-2xl font-[400] font-raleway leading-5">
@@ -263,7 +265,7 @@ const ContactUsPage = () => {
         {/* Email */}
         <div>
           <div className="flex justify-center mb-4">
-            <Mail size={30} />
+            <HiMail size={30} />
           </div>
 
           <h3 className="text-2xl font-[400] font-raleway leading-5">
