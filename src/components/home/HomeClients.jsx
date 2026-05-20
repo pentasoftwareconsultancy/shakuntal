@@ -64,7 +64,7 @@ const HomeClients = () => {
               key={index}
               src={item}
               alt={`project-${index}`}
-              className="h-16 md:h-20 object-contain"
+              className={index === 0 ? "h-24 w-auto object-contain pb-5" : "h-16 w-auto object-contain"}
             />
           ))}
         </div>
