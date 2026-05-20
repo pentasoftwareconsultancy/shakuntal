@@ -59,13 +59,13 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${isScrolled
+      className={`w-full h-[69px] fixed top-0 left-0 z-50 transition-all duration-300 ${isScrolled
         ? 'bg-[#000000cc] backdrop-blur-[25px]'
         : 'bg-[#00000066] backdrop-blur-[25px]'
         }`}
     >
 
-      <div className="px-5 md:px-10 lg:px-16 py-4 flex items-center justify-between">
+      <div className="px-5 md:px-10 lg:px-16 py-2 flex items-center justify-between">
 
         {/* Logo */}
         <div

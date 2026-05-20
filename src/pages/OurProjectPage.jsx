@@ -56,14 +56,14 @@ const OurProjectPage = () => {
   const navigate = useNavigate();
   return (
     <section
-      className="relative h-screen py-12 px-6 md:px-16 bg-cover bg-center"
+      className="relative min-h-screen py-12 px-6 md:px-16 bg-cover bg-center"
       style={{ backgroundImage: `url(${hero})`, }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-10 bg-[#f4f4f4] rounded-b-[30px] mt-10 p-8 md:p-14 max-w-7xl mx-auto shadow-2xl">
+      <div className="relative z-10 bg-[#f4f4f4] rounded-b-[30px] mt-5 p-8 md:p-14 max-w-7xl mx-auto shadow-2xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {projects.map((project) => (
             <div key={project.id}>
@@ -77,27 +77,29 @@ const OurProjectPage = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className={`w-full h-[340px] object-cover hover:scale-105 transition duration-500 ${
+                  className={`w-full h-[240px] object-cover hover:scale-105 transition duration-500 ${
                     project.grayscale ? "grayscale" : ""
                   }`}
                 />
               </div>
 
+              {/* Divider */}
+              <div className="border-t border-[#ddd] mt-4"></div>
+
               {/* Content */}
-              <div className="flex items-end justify-between mt-5">
+              <div className="flex items-center justify-between mt-4">
                 <div>
-                  <h3 className="text-base font-[400] font-raleway text-[#181A20] leading-4">
+                  <h3 className="text-[15px] font-[600] font-raleway text-[#181A20] leading-5">
                     {project.title}
                   </h3>
-
-                  <p className="text-[#717171] font-poppins text-[#717171] text-sm leading-relaxed">
+                  <p className="font-poppins text-[#717171] text-[12px] leading-relaxed">
                     {project.location}
                   </p>
                 </div>
 
                 {/* Arrow Button */}
-                <button className="min-w-[42px] h-[42px] rounded-full border-3 border-[#997708] flex items-center justify-center text-[#997708] hover:bg-[#997708] hover:text-white transition duration-300" onClick={() => project.route && navigate(project.route)}>
-                  <ArrowRight size={24} />
+                <button className="min-w-[36px] h-[36px] rounded-full border border-[#997708] flex items-center justify-center text-[#997708] hover:bg-[#997708] hover:text-white transition duration-300" onClick={() => project.route && navigate(project.route)}>
+                  <ArrowRight size={18} />
                 </button>
               </div>
             </div>
