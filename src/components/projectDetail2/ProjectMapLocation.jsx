@@ -100,7 +100,7 @@ const ProjectMapLocation = () => {
               {section.places.map((place, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center justify-between gap-4 text-[#062E2C] font-poppins font[400] text-sm md:text-base"
+                  className="flex items-center justify-between gap-4 text-[#062E2C] font-poppins font[400] text-xs md:text-base"
                 >
                   <span className="whitespace-nowrap">
                     {place[0]}
