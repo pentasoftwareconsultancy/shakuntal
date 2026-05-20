@@ -43,27 +43,27 @@ const ProjectAbout = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="max-w-[1150px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center mt-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mt-20">
 
         {/* Left Content */}
-        <div className="text-center lg:text-left">
+        <div>
 
-          <h2 className="text-3xl leading-11 font-raleway font-[400]">
+          <h2 className="text-4xl font-[400] leading-[1.2] font-raleway">
             Limited Edition Homes<br /> Designed for Everyday Comfort
           </h2>
 
-          <p className="text-[#6B6B6B] text-base sm:text-lg font-poppins leading-6 mt-4">
+          <p className="text-[#6B6B6B] text-lg mt-6 font-poppins">
             Jadhavwadi, Chikhali, PCMC, Pune
           </p>
 
           {/* Highlights */}
           <div className="mt-8">
 
-            <h3 className="text-base sm:text-lg font-poppins text-[#6B6B6B] font-[300]">
+            <h3 className="text-lg font-medium text-[#6B6B6B] font-poppins">
               Key Highlights
             </h3>
 
-            <ul className="space-y-2 text-[#6B6B6B] font-[300] text-sm sm:text-base lg:text-lg font-poppins leading-6">
+            <ul className="space-y-2 text-[#6B6B6B] text-lg leading-relaxed font-poppins">
               <li>• 2, 3 & 4 BHK Riverside Apartments</li>
               <li>• Scenic Surroundings with Open Living Spaces</li>
               <li>• Spacious Layouts with Natural Ventilation</li>

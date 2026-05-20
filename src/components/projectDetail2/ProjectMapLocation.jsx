@@ -91,7 +91,7 @@ const ProjectMapLocation = () => {
             className="break-inside-avoid mb-14"
           >
             {/* Title */}
-            <h3 className="text-[#062E2C] text-xl font-bold font-raleway mb-7">
+            <h3 className="text-[#062E2C] text-base md:text-lg lg:text-xl font-[700] font-bold font-raleway mb-7">
               {section.title}
             </h3>
 
@@ -100,7 +100,7 @@ const ProjectMapLocation = () => {
               {section.places.map((place, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center justify-between gap-4 text-[#062E2C] font-poppins text-lg"
+                  className="flex items-center justify-between gap-4 text-[#062E2C] font-poppins font[400] text-xs md:text-base"
                 >
                   <span className="whitespace-nowrap">
                     {place[0]}
