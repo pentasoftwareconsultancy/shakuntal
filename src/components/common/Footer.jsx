@@ -1,5 +1,9 @@
 import { Phone, Mail, MapPin, Send } from "lucide-react";
-import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaWhatsapp, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
+import { FiLinkedin } from "react-icons/fi";
+import { HiMail } from "react-icons/hi";
+import { FaLocationDot } from "react-icons/fa6";
+
 import { ROUTES } from "../../core/constants/routes.constant";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png"
@@ -28,30 +32,24 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-4 mt-8">
 
-            {/* Phone */}
-            <a
-              href="tel:8888881672"
-              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
-            >
-              <Phone size={16} />
-            </a>
-
-            {/* Mail */}
-            <a
-              href="mailto:alentiashakuntal@gmail.com"
-              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
-            >
-              <Mail size={16} />
-            </a>
-
             {/* Facebook */}
             <a
               href="https://www.facebook.com/profile.php?id=61574815765879"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
+              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#997708] transition flex items-center justify-center cursor-pointer"
             >
-              <FaFacebookF size={15} />
+              <FaFacebook size={15} />
+            </a>
+
+            {/* Whatsapp */}
+            <a
+              href="https://wa.me/918888881672"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#997708] transition flex items-center justify-center cursor-pointer"
+            >
+              <FaWhatsapp  size={16} />
             </a>
 
             {/* Instagram */}
@@ -59,7 +57,7 @@ const Footer = () => {
               href="https://www.instagram.com/shakuntalgroup/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
+              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#997708] transition flex items-center justify-center cursor-pointer"
             >
               <FaInstagram size={15} />
             </a>
@@ -69,9 +67,9 @@ const Footer = () => {
               href="https://www.linkedin.com/company/shakuntal-group"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#b68b07] transition flex items-center justify-center cursor-pointer"
+              className="w-10 h-10 rounded-full bg-[#21180d] hover:bg-[#997708] transition flex items-center justify-center cursor-pointer"
             >
-              <FaLinkedinIn size={15} />
+              <FiLinkedin size={15} />
             </a>
 
           </div>
@@ -172,17 +170,17 @@ const Footer = () => {
 
           <div className="space-y-5 text-[#A5A49A] font-poppins font-[300] text-sm">
             <div className="flex items-start gap-3">
-              <Phone size={16} className="mt-1 text-white" />
+              <FaPhoneAlt size={16} className="mt-1 text-white" />
               <p>88888 81672</p>
             </div>
 
             <div className="flex items-start gap-3">
-              <Mail size={16} className="mt-1 text-white" />
+              <HiMail size={16} className="mt-1 text-white" />
               <p>needhelp@company.com</p>
             </div>
 
             <div className="flex items-start gap-3">
-              <MapPin size={30} className="mt-1 text-white" />
+              <FaLocationDot size={30} className="mt-1 text-white" />
 
               <p className="leading-6">
                 Office No. 110,111 & 112, H Wing,
@@ -201,8 +199,8 @@ const Footer = () => {
               className="w-full h-[48px] px-4 bg-white text-black text-sm outline-none"
             />
 
-            <button className="bg-[#b68b07] min-w-[56px] h-[48px] flex items-center justify-center hover:bg-[#9b7706] transition">
-              <Send size={18} />
+            <button className="bg-[#997708] min-w-[56px] h-[48px] flex items-center justify-center hover:bg-[#997708] transition">
+              <FaPaperPlane size={18} />
             </button>
           </div>
         </div>
