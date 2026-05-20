@@ -107,7 +107,7 @@ const HomeActivities = () => {
                 </div>
 
                 {/* Card + Buttons */}
-                <div className="flex items-center gap-6">
+                <div className="flex md:flex-row flex-col items-center gap-6">
 
                   {/* Card */}
                   <div className="bg-[#997708] border border-white/20 p-10 rounded-[28px] max-w-[650px] text-white shadow-2xl">
@@ -123,7 +123,7 @@ const HomeActivities = () => {
                   </div>
 
                   {/* Navigation Buttons */}
-                  <div className="flex flex-col gap-4 mb-2">
+                  <div className="flex flex-row md:flex-col gap-4 mb-2">
 
                     <button
                       onClick={prevSlide}
