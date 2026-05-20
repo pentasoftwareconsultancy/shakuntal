@@ -36,10 +36,10 @@ const StoryTeam = () => {
   const [selectedMember, setSelectedMember] = useState(teamMembers[0]);
 
   return (
-    <section className="bg-[#EFE9D8] py-20 px-6 md:px-16 lg:px-24">
+    <section className="bg-[#EFE9D8] py-10 px-6 md:px-16 lg:px-24">
 
       {/* Top Button */}
-      <button className="border border-[#997708] text-[#997708] px-10 py-3 rounded-xl text-sm font-medium mb-6 hover:bg-[#997708] hover:text-white transition duration-300">
+      <button className="font-[Raleway] font-normal text-[18px] text-[#997708] leading-[28px] tracking-normal text-center align-middle capitalize w-[219px] h-[43px] rounded-[10px] border border-[#997708] mb-5 hover:bg-[#b68b07] hover:text-white transition duration-300">
         Our Team
       </button>
 
@@ -53,7 +53,7 @@ const StoryTeam = () => {
         </h2>
 
         {/* Right */}
-        <p className="text-[#1D1C1C] text-[16px] leading-7 font-poppins font-[300] max-w-[730px]">
+        <p className="text-[#1D1C1C] text-[16px] leading-[28px] tracking-normal font-poppins font-[300] max-w-[730px]">
           Shakuntal Group is driven by a team focused on thoughtful planning,
           quality construction, and delivering spaces that offer long-term
           value and comfort. A dedicated team working together to deliver
@@ -88,15 +88,15 @@ const StoryTeam = () => {
 
 
 
-                  <p className="text-white text-sm font-[300] leading-4 mt-10 font-poppins">
+                  <p className="text-white text-[14px] font-[300] leading-[16px] tracking-normal align-middle mt-10 font-poppins">
                     {selectedMember.description}
                   </p>
 
-                  <h3 className="text-white text-sm font-[400] leading-4 pt-10 font-raleway">
+                  <h3 className="text-[#FFFFFF] text-[18px] font-[400] leading-[16px] tracking-normal align-middle pt-10 font-raleway">
                     {selectedMember.name}
                   </h3>
 
-                  <p className="text-white text-sm font-[400] leading-4 mt-1 font-raleway">
+                  <p className="text-[#FFFFFF] text-[14px] font-[400] leading-[16px] tracking-normal align-middle mt-1 font-raleway">
                     {selectedMember.role}
                   </p>
                 </div>
@@ -140,10 +140,10 @@ const StoryTeam = () => {
                 {/* Bottom Content */}
                 {!isSelected && (
                   <div className="pt-4 transition-all duration-500">
-                    <h3 className="text-lg leading-4 font-poppins font-[400]">
+                    <h3 className="text-[18px] leading-[16px] tracking-normal align-middle font-poppins font-[400]">
                       {member.name}
                     </h3>
-                    <p className="text-[#4f4f4f] text-sm mt-1 font-poppins font-[300]">
+                    <p className="text-[#4f4f4f] text-[14px] leading-[16px] align-middle mt-1 font-poppins font-[300]">
                       {member.role}
                     </p>
                   </div>

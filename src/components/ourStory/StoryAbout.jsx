@@ -48,7 +48,7 @@ const StoryAbout = () => {
           Building Spaces that last
         </h2>
 
-        <p className="text-[#6B6B6B] text-xl leading-6 font-poppins">
+        <p className="font-light text-[18px] leading-[24px] tracking-normal text-center align-middle text-[#6B6B6B] font-poppins">
           Shakuntal Group is a trusted real estate developer with over 15 years of experience, built on the belief that exceptional spaces begin with thoughtful planning. We are committed to transparency, timely delivery, and creating homes and commercial spaces that provide lasting comfort, value, and trust for our customers and communities.
         </p>
       </div>
@@ -77,7 +77,7 @@ const StoryAbout = () => {
                 {item.title}
               </h3>
 
-              <p className="text-[#6B6B6B] leading-6 text-lg font-poppins">
+              <p className="font-light text-[18px] leading-[24px] text-[#6B6B6B] tracking-normal align-middle font-poppins max-w-lg">
                 {item.description}
               </p>
             </div>

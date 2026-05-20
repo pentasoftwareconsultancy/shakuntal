@@ -129,28 +129,24 @@ const Footer = () => {
           </div>
 
           <ul className="space-y-4 text-[#A5A49A] font-poppins font-[300] text-sm">
-            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.OURSTORY)}>
-              About
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.PROJECTDETAILONE)}>
+              Blue Water
             </li>
 
-            <li className="hover:text-white transition cursor-pointer">
-              Services
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.PROJECTDETAILTWO)}>
+              Dwarka
             </li>
 
-            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.OURPROJECT)}>
-              Our Projects
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.PROJECTDETAILTHREE)}>
+              Forestia
             </li>
 
-            <li className="hover:text-white transition cursor-pointer">
-              Meet the Farmers
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.PROJECTDETAILFOUR)}>
+              Shakuntal Commercia
             </li>
 
-            <li className="hover:text-white transition cursor-pointer">
-              Latest News
-            </li>
-
-            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.CONTACT)}>
-              Contact
+            <li className="hover:text-white transition cursor-pointer" onClick={() => navigate(ROUTES.PROJECTDETAILFIVE)}>
+              Alentia
             </li>
           </ul>
         </div>

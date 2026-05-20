@@ -8,7 +8,7 @@ const StoryHero = () => {
       <img
         src={ourstoryhero}
         alt="Our Story Hero"
-        className="w-full h-full object-cover"
+        className="w-full h-full bg-contain"
       />
 
       {/* Overlay */}
