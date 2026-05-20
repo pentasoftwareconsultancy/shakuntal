@@ -5,19 +5,19 @@ import about from "../../assets/projectDetailTwo/about1.png";
 
 const ProjectAbout = () => {
   return (
-    <section className="pt-6 pb-22 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
+    <section className="pt-2 pb-22 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
 
       {/* Top Info */}
       <div className="max-w-[1150px] mx-auto">
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-20 border-b border-gray-300 pb-6">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-20 border-b border-gray-300 pb-3">
 
           {/* Logo */}
           <div className="flex justify-center">
             <img
               src={aboutIcon1}
               alt="Project Icon"
-              className="w-32 sm:w-36 md:w-40 lg:w-50 h-25 object-contain"
+              className="w-32 sm:w-36 md:w-40 lg:w-50 h-25 object-contain mb-10"
             />
           </div>
 
@@ -35,7 +35,7 @@ const ProjectAbout = () => {
             <img
               src={aboutIcon3}
               alt="Location Icon"
-              className="w-40 sm:w-44 md:w-48 lg:w-70 h-auto object-contain"
+              className="w-40 sm:w-44 md:w-48 lg:w-90 h-auto object-contain"
             />
           </div>
 

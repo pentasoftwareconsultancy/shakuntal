@@ -5,7 +5,7 @@ import about from "../../assets/projectDetailThree/about.png";
 
 const ProjectAbout = () => {
   return (
-    <section className="py-8 px-6 md:px-16 lg:px-24">
+    <section className="py-4 px-6 md:px-16 lg:px-24">
       {/* Top Info */}
      <div className="max-w-[1150px] mx-auto">
        
