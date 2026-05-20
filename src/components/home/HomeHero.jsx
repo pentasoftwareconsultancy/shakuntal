@@ -55,7 +55,7 @@ const HomeHero = () => {
 
       {/* Text */}
       <div className="absolute bottom-16 left-10 z-10">
-        <h1 className="text-white text-[56px] font-raleway font-[300] leading-16">
+        <h1 className="text-white text-3xl md:text-[56px] font-raleway font-[300] leading-9 md:leading-16">
           A home is more than
           <br />
           a structure, It’s a
