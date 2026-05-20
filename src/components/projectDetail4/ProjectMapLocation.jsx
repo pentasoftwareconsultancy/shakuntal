@@ -90,7 +90,7 @@ const ProjectMapLocation = () => {
         {locationData.map((section, index) => (
           <div key={index}>
             {/* Title */}
-            <h3 className="text-[#062E2C] text-xl font-semibold font-raleway uppercase mb-7">
+            <h3 className="text-[#062E2C] text-base md:text-lg lg:text-xl font-[700] font-semibold font-raleway uppercase mb-7">
               {section.title}
             </h3>
 
@@ -99,7 +99,7 @@ const ProjectMapLocation = () => {
               {section.places.map((place, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center justify-between gap-4 text-[#062E2C] text-lg"
+                  className="flex items-center justify-between gap-4 text-[#062E2C] font[400] text-base md:text-lg lg:text-lg"
                 >
                   <span className="whitespace-nowrap font-poppins">
                     {place[0]}
