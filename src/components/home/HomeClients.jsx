@@ -72,7 +72,7 @@ const HomeClients = () => {
 
       {/* Sustainable Section */}
       <div
-        className="relative w-full min-h-[650px] bg-cover bg-center flex items-end"
+        className="relative w-full min-h-[650px] bg-cover bg-top md:bg-center flex items-end"
         style={{
           backgroundImage: `url(${bgImage})`,
         }}
