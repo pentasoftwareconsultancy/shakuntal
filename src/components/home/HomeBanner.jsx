@@ -16,28 +16,29 @@ const HomeBanner = () => {
         />
 
         {/* Content */}
-        <div className="relative z-10 h-full px-8 md:px-30 flex items-center">
+        <div className="relative z-10 h-full px-8 md:px-30 flex py-7 md:items-center">
 
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="max-w-[650px] text-black z-20"
           >
 
-            <h3 className="text-[#181A20] text-3xl md:text-5xl font-raleway font-[400] leading-14">
+            <h3 className="text-[#181A20] text-2xl md:text-5xl font-raleway font-[400] leading-9 md:leading-14">
               Buying a home is one of <br/>the most important <br/>
                decisions in a person's life.<br/> At Shakuntal Group, we
                <br/> build with that<br/>    responsibility in mind.
             </h3>
 
             <div className="mt-10">
-              <h5 className="text-2xl font-poppins font-[600]">
+              <h5 className="text-xl md:text-2xl font-poppins font-[600]">
                 Ajay Vijay
               </h5>
 
-              <p className="text-lg text-[#997708] font-poppins font-[600]">
+              <p className="text-base md:text-lg text-[#997708] font-poppins font-[600]">
                 Director And Founder Of <br/>
                  Shakuntal Group
               </p>
@@ -47,8 +48,9 @@ const HomeBanner = () => {
 
           {/* Right Image From Bottom */}
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
             className="absolute bottom-0 right-20 z-10"
           >
