@@ -120,9 +120,14 @@ const CareerPage = () => {
             </div>
 
             {/* Button */}
-            <button className="min-w-[240px] h-[43px] border border-[#997708] rounded-xl text-[#997708] text-base font-medium hover:bg-[#997708] hover:text-white transition duration-300">
+            <a
+              href="https://forms.gle/2Er83YVyPcidBJR58"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="min-w-[240px] h-[43px] border border-[#997708] rounded-xl text-[#997708] text-base font-medium hover:bg-[#997708] hover:text-white transition duration-300 flex items-center justify-center"
+            >
               Join Us
-            </button>
+            </a>
           </div>
         ))}
       </div>
