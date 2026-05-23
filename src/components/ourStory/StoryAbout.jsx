@@ -42,14 +42,14 @@ const StoryAbout = () => {
   return (
     <section className="py-20 px-6 md:px-16 lg:px-24">
       {/* Heading */}
-      <div className="text-center max-w-4xl mx-auto mb-20">
+      <div className="text-center max-w-5xl mx-auto mb-20">
 
         <h2 className="text-4xl md:text-3xl font-[400] mb-6 font-raleway">
           Building Spaces that last
         </h2>
 
         <p className="font-light text-[18px] leading-[24px] tracking-normal text-center align-middle text-[#6B6B6B] font-poppins">
-          Shakuntal Group is a trusted real estate developer with over 15 years of experience, built on the belief that exceptional spaces begin with thoughtful planning. We are committed to transparency, timely delivery, and creating homes and commercial spaces that provide lasting comfort, value, and trust for our customers and communities.
+          Shakuntal Group is a trusted real estate developer with over 15 years of experience, built on the belief that <br /> exceptional spaces begin with thoughtful planning. We are committed to transparency, timely delivery, <br /> and creating homes and commercial spaces that provide lasting comfort, value, and trust for our<br /> customers and communities.
         </p>
       </div>
 
@@ -77,7 +77,7 @@ const StoryAbout = () => {
                 {item.title}
               </h3>
 
-              <p className="font-light text-[18px] leading-[24px] text-[#6B6B6B] tracking-normal align-middle font-poppins max-w-lg">
+              <p className="font-light text-[18px] leading-[24px] text-[#6B6B6B] tracking-normal align-middle font-poppins max-w-[525px]">
                 {item.description}
               </p>
             </div>
