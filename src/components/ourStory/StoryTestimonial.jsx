@@ -22,7 +22,7 @@ const testimonials = [
     id: 3,
     title: "Video Testimonial",
     image: "",
-    link: "",
+    link: "https://www.youtube.com/watch?v=Kr59hhibTaA",
   },
 ];
 

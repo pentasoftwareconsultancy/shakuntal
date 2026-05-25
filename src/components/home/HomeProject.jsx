@@ -13,30 +13,35 @@ const projectsData = [
     image: project1,
     title: 'Blue Water',
     location: 'Jadhavwadi, Chikhali, Pune',
+    navigateTo: ROUTES.PROJECTDETAILONE,
   },
   {
     id: 2,
     image: project2,
     title: 'Dwarka',
     location: 'Chikhali, PCMC',
+    navigateTo: ROUTES.PROJECTDETAILTWO,
   },
   {
     id: 3,
     image: project3,
     title: 'Forestia',
     location: 'Dudulgaon - Moshi, Pune',
+    navigateTo: ROUTES.PROJECTDETAILTHREE,
   },
   {
     id: 4,
     image: project4,
     title: 'Shakuntal Commercial',
     location: 'Chikhali, PCMC, Pune',
+    navigateTo: ROUTES.PROJECTDETAILFOUR,
   },
   {
     id: 5,
     image: project5,
     title: 'Alentia',
     location: 'Charholi, Pune',
+    navigateTo: ROUTES.PROJECTDETAILFIVE,
   },
 ]
 
@@ -59,6 +64,7 @@ const HomeProject = () => {
               <div
                 key={project.id}
                 className="w-full"
+                onClick={() => navigate(project.navigateTo)}
               >
                 {/* Image */}
                 <div className="overflow-hidden">

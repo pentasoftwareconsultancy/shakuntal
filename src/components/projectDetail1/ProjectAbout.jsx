@@ -11,7 +11,7 @@ const ProjectAbout = () => {
       {/* Top Info */}
       <div className="max-w-[1150px] mx-auto">
 
-        <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-6 sm:gap-8 border-b border-gray-300 pb-6">
+        <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-6 sm:gap-22 border-b border-gray-300 pb-6">
 
           {/* Logo */}
           <div className="flex justify-center w-1/2 sm:w-auto">
