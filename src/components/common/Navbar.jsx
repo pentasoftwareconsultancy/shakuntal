@@ -85,6 +85,15 @@ const Navbar = () => {
           {navItems.map((item, index) => (
             <button
               key={index}
+              onMouseEnter={() => {
+                if (item.name === 'Our Projects') {
+                  navigate(ROUTES.OURPROJECT)
+                }
+              
+                if (item.name === 'Enquire') {
+                  navigate(ROUTES.ENQUIRE)
+                }
+              }}
               onClick={() => {
                 if (item.action) {
                   item.action()
