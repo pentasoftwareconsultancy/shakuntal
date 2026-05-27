@@ -16,7 +16,7 @@ const StoryHero = () => {
 
       {/* Center Text */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-[#352F19] text-5xl md:text-8xl font-[700] leading-16 tracking-wide drop-shadow-lg font-apparel">
+        <h1  style={{ fontFamily: "Apparel" }} className="text-[#352F19] text-5xl md:text-8xl font-[700] leading-16 tracking-wide drop-shadow-lg">
           Our Story
         </h1>
       </div>
